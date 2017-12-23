@@ -4,6 +4,6 @@
  - 创建第一个服务k8s服务
 * [架构](architecture/README.md)
 * [对象介绍](object/README.md)
-* [安装部署](install/README.md)
- - [二进制安装部署](install/get-binary.md)
+* [安装部署](install/binary-install/README.md)
+ - [二进制安装部署](install/binary-install/get-binary.md)
 * [结束](end/README.md)
