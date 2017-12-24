@@ -9,7 +9,7 @@ kube-router[官方文档](https://github.com/cloudnativelabs/kube-router/tree/ma
 kube-router 
 - 使用iptables实现网络策略限制. --run-router参数，可透传源IP。
 - 通过bgp实现路由策略.--run-firewall 参数
-- 通过lvs实现代理策略，比kube-proxy的ipvs要高效很多。 --run-service-proxy
+- 通过lvs实现代理策略。 --run-service-proxy
 
 --run-firewall, --run-router, --run-service-proxy可以有选择地只启用kube-router所需的功能
 

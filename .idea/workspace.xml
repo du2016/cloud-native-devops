@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1204068-a1f9-4dd6-a350-5b7b2e59af4f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/accesssvc/loadbalance.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/develop/develop-clientset.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/develop/develop-dynamiclient.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/develop/develop-restclient.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/develop/develop-web-terminal.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/binary-install/install-node.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/kops-install/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/kubeadm-install/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/minikube/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-coredns.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-dashboard.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-heapster-influxdb-grafana.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-dns.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kubedns.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/network/calico.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/network/canal.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/network/flanneld.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/network/weave.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/storage/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tools/helm/README.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SUMMARY.md" afterPath="$PROJECT_DIR$/SUMMARY.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/README.md" afterPath="$PROJECT_DIR$/install/binary-install/README.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/gencerts.md" afterPath="$PROJECT_DIR$/install/binary-install/gencerts.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/genkubeconfig.md" afterPath="$PROJECT_DIR$/install/binary-install/genkubeconfig.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/install-etcd.md" afterPath="$PROJECT_DIR$/install/binary-install/install-etcd.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/install-master.md" afterPath="$PROJECT_DIR$/install/binary-install/install-master.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/install-netwrok.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/install/plugins/install-kube-router.md" afterPath="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,12 +79,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install-kube-router.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="install-kube-router.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-router.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="489">
-                <caret line="53" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <first_editor relative-caret-position="190">
+                <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -135,12 +105,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install-coredns.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="install-coredns.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install/plugins/install-coredns.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="120">
-                <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+                <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -239,10 +209,10 @@
         <option value="$PROJECT_DIR$/install/binary-install/genkubeconfig.md" />
         <option value="$PROJECT_DIR$/install/binary-install/install-master.md" />
         <option value="$PROJECT_DIR$/install/binary-install/install-node.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
         <option value="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
         <option value="$PROJECT_DIR$/install/plugins/install-kube-dns.md" />
         <option value="$PROJECT_DIR$/install/plugins/install-coredns.md" />
+        <option value="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
       </list>
     </option>
   </component>
@@ -281,6 +251,17 @@
             <path>
               <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
               <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
@@ -358,7 +339,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34856007" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078451" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15867944" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -916,22 +897,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-router.md">
+    <entry file="file://$PROJECT_DIR$/install/plugins/install-coredns.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="489">
-            <caret line="53" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-coredns.md">
+    <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-router.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <first_editor relative-caret-position="190">
+            <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             <folding />
           </first_editor>
           <second_editor />
