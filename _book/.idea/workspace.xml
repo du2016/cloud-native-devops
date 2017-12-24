@@ -12,10 +12,8 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/install/kops-install/README.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/kubeadm-install/README.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/minikube/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-coredns.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-dashboard.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-heapster-influxdb-grafana.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-dns.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/install/plugins/install-kubedns.md" />
@@ -109,12 +107,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install-kube-router.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="install-kube-router.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-router.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="489">
-                <caret line="53" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <first_editor relative-caret-position="569">
+                <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -122,38 +120,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install-kube-proxy.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-proxy.md">
+      <file leaf-file-name="get-binary.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install/binary-install/get-binary.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="426">
-                <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-coredns.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/install/plugins/install-coredns.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-kube-dns.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-dns.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <first_editor relative-caret-position="66">
+                <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="40" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -167,6 +139,32 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="845">
                 <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="62" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install/binary-install/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="810">
+                <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="30" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calico.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/calico.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -195,7 +193,6 @@
       <find>ETCD_INITIAL_ADVERTISE_PEER_URLS</find>
       <find>token</find>
       <find>bootstrap.kubeconfig</find>
-      <find>use-service-account-credentials</find>
     </findStrings>
     <replaceStrings>
       <replace>\$</replace>
@@ -222,6 +219,7 @@
         <option value="$PROJECT_DIR$/install/binary-install/gencerts.md" />
         <option value="$PROJECT_DIR$/install/binary-install/install-netwrok.md" />
         <option value="$PROJECT_DIR$/install/binary-install/install-kube-router.md" />
+        <option value="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
         <option value="$PROJECT_DIR$/install/kops-install/README.md" />
         <option value="$PROJECT_DIR$/develop/develop-web-terminal.md" />
         <option value="$PROJECT_DIR$/install/minikube/README.md" />
@@ -240,9 +238,6 @@
         <option value="$PROJECT_DIR$/install/binary-install/install-master.md" />
         <option value="$PROJECT_DIR$/install/binary-install/install-node.md" />
         <option value="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-dns.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-coredns.md" />
       </list>
     </option>
   </component>
@@ -281,6 +276,23 @@
             <path>
               <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
               <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+              <item name="binary-install" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
+              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
@@ -358,8 +370,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34856007" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15867944" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -386,6 +398,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/install/binary-install/install-etcd.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/install/binary-install/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -486,6 +520,17 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="210">
             <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-proxy.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="675">
+            <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
@@ -855,6 +900,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/install/plugins/install-kubedns.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/install/binary-install/install-etcd.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -883,55 +939,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-kubedns.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-proxy.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="426">
-            <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-dns.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/install/plugins/install-kube-router.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="489">
-            <caret line="53" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/plugins/install-coredns.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <first_editor relative-caret-position="569">
+            <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
             <folding />
           </first_editor>
           <second_editor />

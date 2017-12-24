@@ -3,7 +3,8 @@
 #### 通用配置文件
 
 ```
-/etc/kubernetes/config
+mkdir /etc/kubernetes
+cat > /etc/kubernetes/config <<EOF
 ###
 # kubernetes system config
 #
@@ -25,13 +26,14 @@ KUBE_LOG_LEVEL="--v=0"
 KUBE_ALLOW_PRIV="--allow-privileged=true"
 
 # How the controller-manager, scheduler, and proxy find the apiserver
-KUBE_MASTER="--master=https://172.26.6.131:6443"
+KUBE_MASTER="--master=http://127.0.0.1:8080"
 EOF
 ```
 
 #### kube-apiserver配置
 
 - 服务配置文件
+
 ```
 /usr/lib/systemd/system/kube-apiserver.service
 [Unit]
@@ -44,16 +46,16 @@ After=etcd.service
 EnvironmentFile=-/etc/kubernetes/config
 EnvironmentFile=-/etc/kubernetes/apiserver
 ExecStart=/usr/local/bin/kube-apiserver \
-        \$KUBE_LOGTOSTDERR \
-        \$KUBE_LOG_LEVEL \
-        \$KUBE_ETCD_SERVERS \
-        \$KUBE_API_ADDRESS \
-        \$KUBE_API_PORT \
-        \$KUBELET_PORT \
-        \$KUBE_ALLOW_PRIV \
-        \$KUBE_SERVICE_ADDRESSES \
-        \$KUBE_ADMISSION_CONTROL \
-        \$KUBE_API_ARGS
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_ETCD_SERVERS \
+        $KUBE_API_ADDRESS \
+        $KUBE_API_PORT \
+        $KUBELET_PORT \
+        $KUBE_ALLOW_PRIV \
+        $KUBE_SERVICE_ADDRESSES \
+        $KUBE_ADMISSION_CONTROL \
+        $KUBE_API_ARGS
 Restart=on-failure
 Type=notify
 LimitNOFILE=65536
@@ -63,6 +65,7 @@ WantedBy=multi-user.target
 ```
 
 - 参数配置文件
+[node节点注册说明](https://kubernetes.io/docs/admin/authorization/node/)
 ```
 cat > /etc/kubernetes/apiserver <<EOF
 ###
@@ -72,7 +75,7 @@ cat > /etc/kubernetes/apiserver <<EOF
 ##
 #
 ## The address on the local server to listen to.
-KUBE_API_ADDRESS="--advertise-address=172.26.6.1 --bind-address=172.26.6.1 --insecure-bind-address=172.26.6.1"
+KUBE_API_ADDRESS="--advertise-address=172.26.6.1 --bind-address=172.26.6.1 --insecure-bind-address=127.0.0.1"
 #
 ## The port on the local server to listen on.
 #KUBE_API_PORT="--port=8080"
@@ -81,7 +84,7 @@ KUBE_API_ADDRESS="--advertise-address=172.26.6.1 --bind-address=172.26.6.1 --ins
 #KUBELET_PORT="--kubelet-port=10250"
 #
 ## Comma separated list of nodes in the etcd cluster
-KUBE_ETCD_SERVERS="--etcd-servers=https://172.26.6.1:4001,https://172.26.6.2:4001,https://172.26.6.1:4001"
+KUBE_ETCD_SERVERS="--etcd-servers=https://172.26.6.1:4001,https://172.26.6.2:4001,https://172.26.6.3:4001"
 #
 ## Address range to use for services
 KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/16"
@@ -90,19 +93,13 @@ KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/16"
 KUBE_ADMISSION_CONTROL="--admission-control=NamespaceLifecycle,NamespaceExists,LimitRanger,ServiceAccount,ResourceQuota,Initializers"
 #
 ## Add your own!
-KUBE_API_ARGS="--authorization-mode=RBAC --runtime-config=rbac.authorization.k8s.io/v1beta1=true,admissionregistration.k8s.io/v1alpha1=true --kubelet-https=true --experimental-bootstrap-token-auth --token-auth-file=/etc/kubernetes/token.csv --service-node-port-range=30000-32767 --tls-cert-file=/etc/kubernetes/ssl/kubernetes.pem --tls-private-key-file=/etc/kubernetes/ssl/kubernetes-key.pem --client-ca-file=/etc/kubernetes/ssl/ca.pem --service-account-key-file=/etc/kubernetes/ssl/ca-key.pem --etcd-cafile=/etc/kubernetes/ssl/ca.pem --etcd-certfile=/etc/kubernetes/ssl/kubernetes.pem --etcd-keyfile=/etc/kubernetes/ssl/kubernetes-key.pem --enable-swagger-ui=true --apiserver-count=3 --audit-log-maxage=30 --audit-log-maxbackup=3 --audit-log-maxsize=100 --audit-log-path=/var/lib/audit.log --event-ttl=1h"
+KUBE_API_ARGS="--authorization-mode=Node,RBAC --runtime-config=rbac.authorization.k8s.io/v1beta1=true,admissionregistration.k8s.io/v1alpha1=true --kubelet-https=true enable-bootstrap-token-auth --token-auth-file=/etc/kubernetes/token.csv --service-node-port-range=30000-32767 --tls-cert-file=/etc/kubernetes/ssl/kubernetes.pem --tls-private-key-file=/etc/kubernetes/ssl/kubernetes-key.pem --client-ca-file=/etc/kubernetes/ssl/ca.pem --service-account-key-file=/etc/kubernetes/ssl/ca-key.pem --etcd-cafile=/etc/kubernetes/ssl/ca.pem --etcd-certfile=/etc/kubernetes/ssl/kubernetes.pem --etcd-keyfile=/etc/kubernetes/ssl/kubernetes-key.pem --enable-swagger-ui=true --apiserver-count=3 --audit-log-maxage=30 --audit-log-maxbackup=3 --audit-log-maxsize=100 --audit-log-path=/var/lib/audit.log --event-ttl=1h"
 EOF
 ```
 
 - 启动
 
 ```
-#创建BOOTSTRAP_TOKEN
-export BOOTSTRAP_TOKEN=$(head -c 16 /dev/urandom | od -An -t x | tr -d ' ')
-cat > /etc/kubernetes/token.csv <<EOF
-${BOOTSTRAP_TOKEN},kubelet-bootstrap,10001,"system:kubelet-bootstrap"
-EOF
-
 systemctl daemon-reload
 systemctl enable kube-apiserver
 systemctl start kube-apiserver
@@ -112,6 +109,7 @@ systemctl status kube-apiserver
 #### kube-controller-manager配置
 
 - 服务配置文件
+
 ```
 vim /usr/lib/systemd/system/kube-controller-manager.service
 [Unit]
@@ -122,10 +120,10 @@ Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 EnvironmentFile=-/etc/kubernetes/config
 EnvironmentFile=-/etc/kubernetes/controller-manager
 ExecStart=/usr/local/bin/kube-controller-manager \
-        \$KUBE_LOGTOSTDERR \
-        \$KUBE_LOG_LEVEL \
-        \$KUBE_MASTER \
-        \$KUBE_CONTROLLER_MANAGER_ARGS
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_MASTER \
+        $KUBE_CONTROLLER_MANAGER_ARGS
 Restart=on-failure
 LimitNOFILE=65536
 
@@ -134,6 +132,7 @@ WantedBy=multi-user.target
 ```
 
 - 参数配置文件
+
 ```
 cat > /etc/kubernetes/controller-manager <<EOF
 ###
@@ -142,11 +141,12 @@ cat > /etc/kubernetes/controller-manager <<EOF
 # defaults from config and apiserver should be adequate
 
 # Add your own!
-KUBE_CONTROLLER_MANAGER_ARGS="--address=127.0.0.1 --service-cluster-ip-range=10.254.0.0/16 --cluster-name=kubernetes --cluster-signing-cert-file=/etc/kubernetes/ssl/ca.pem --cluster-signing-key-file=/etc/kubernetes/ssl/ca-key.pem  --service-account-private-key-file=/etc/kubernetes/ssl/ca-key.pem --root-ca-file=/etc/kubernetes/ssl/ca.pem --leader-elect=true"
+KUBE_CONTROLLER_MANAGER_ARGS="--address=127.0.0.1 --allocate-node-cidrs=true --cluster-cidr=10.253.0.0/16 --node-cidr-mask-size=24 --service-cluster-ip-range=10.254.0.0/16 --cluster-name=kubernetes --cluster-signing-cert-file=/etc/kubernetes/ssl/ca.pem --cluster-signing-key-file=/etc/kubernetes/ssl/ca-key.pem  --service-account-private-key-file=/etc/kubernetes/ssl/ca-key.pem --root-ca-file=/etc/kubernetes/ssl/ca.pem --leader-elect=true"
 EOF
 ```
 
 - 启动
+
 ```
 systemctl daemon-reload
 systemctl enable kube-controller-manager
@@ -181,7 +181,7 @@ WantedBy=multi-user.target
 - 参数配置文件
 
 ```
-/etc/kubernetes/scheduler
+cat > /etc/kubernetes/scheduler << EOF
 ###
 # kubernetes scheduler config
 
@@ -189,6 +189,7 @@ WantedBy=multi-user.target
 
 # Add your own!
 KUBE_SCHEDULER_ARGS="--leader-elect=true --address=127.0.0.1"
+EOF
 ```
 
 - 启动
@@ -202,5 +203,5 @@ systemctl start kube-scheduler
 # 查看状态
 
 ```
-kubectl get componentstatuses
+kubectl get cs
 ```

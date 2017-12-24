@@ -1,9 +1,26 @@
+# Summary
+
+* [Introduction](README.md)
 * [简介](introduce/introduce-k8s.md)
 * [快速入门](getstart/README.md)
- - [快速启动你的第一个k8s集群](getstart/README.md)
- - 创建第一个服务k8s服务
+    * [快速启动你的第一个k8s集群](getstart/README.md)
+    * 创建第一个服务k8s服务
 * [架构](architecture/README.md)
 * [对象介绍](object/README.md)
 * [安装部署](install/binary-install/README.md)
- - [二进制安装部署](install/binary-install/get-binary.md)
+    * [二进制安装部署](install/binary-install/get-binary.md)
+        * [生成证书](install/binary-install/gencerts.md)
+        * [安装etcd集群](install/binary-install/install-etcd.md)
+        * [安装master节点](install/binary-install/install-master.md)
+        * [安装node节点](install/binary-install/install-node.md)
+    * [插件安装]
+        * [安装kube-router](install/plugins/install-kube-router.md)
+        * [安装kube-proxy](install/plugins/install-kube-proxy.md)
+  [存储](storage/README.md)
+    * [glusterfs](storage/gluster-storage.md)
+    * [nfs](storage/nfs-strorage.md)
+  [工具](tools/helm/README.md)
+* [开发实践](develop/README.md)
+    * [自定义kube-scheduler](develop/self-develop-scheduler.md)
+    * [实现webterminal](develop/develop-web-terminal.md)     
 * [结束](end/README.md)

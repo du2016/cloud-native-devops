@@ -92,7 +92,7 @@ cat > kubernetes-csr.json <<EOF
     "ST": "Beijing",
     "L": "BeiJing",
     "O": "k8s",
-    "OU": "System",
+    "OU": "System"
   }]
 } 
 EOF
@@ -108,7 +108,6 @@ cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kube
 
 ```
 cat > admin-csr.json <<EOF
-
 {
   "CN": "admin",
   "hosts": [],

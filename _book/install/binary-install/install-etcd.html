@@ -1,0 +1,604 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>安装etcd集群 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="install-master.html" />
+    
+    
+    <link rel="prev" href="gencerts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../introduce/introduce-k8s.html">
+            
+                <a href="../../introduce/introduce-k8s.html">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../getstart/">
+            
+                <a href="../../getstart/">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../getstart/">
+            
+                <a href="../../getstart/">
+            
+                    
+                    快速启动你的第一个k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    创建第一个服务k8s服务
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../architecture/">
+            
+                <a href="../../architecture/">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../object/">
+            
+                <a href="../../object/">
+            
+                    
+                    对象介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    安装部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="get-binary.html">
+            
+                <a href="get-binary.html">
+            
+                    
+                    二进制安装部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="gencerts.html">
+            
+                <a href="gencerts.html">
+            
+                    
+                    生成证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.1.2" data-path="install-etcd.html">
+            
+                <a href="install-etcd.html">
+            
+                    
+                    安装etcd集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="install-master.html">
+            
+                <a href="install-master.html">
+            
+                    
+                    安装master节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="install-node.html">
+            
+                <a href="install-node.html">
+            
+                    
+                    安装node节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    [插件安装]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../plugins/install-kube-router.html">
+            
+                <a href="../plugins/install-kube-router.html">
+            
+                    
+                    安装kube-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../plugins/install-kube-proxy.html">
+            
+                <a href="../plugins/install-kube-proxy.html">
+            
+                    
+                    安装kube-proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../storage/gluster-storage.html">
+            
+                <a href="../../storage/gluster-storage.html">
+            
+                    
+                    glusterfs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../storage/nfs-strorage.html">
+            
+                <a href="../../storage/nfs-strorage.html">
+            
+                    
+                    nfs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../develop/README.md">
+            
+                <span>
+            
+                    
+                    开发实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../develop/self-develop-scheduler.html">
+            
+                <a href="../../develop/self-develop-scheduler.html">
+            
+                    
+                    自定义kube-scheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../develop/develop-web-terminal.html">
+            
+                <a href="../../develop/develop-web-terminal.html">
+            
+                    
+                    实现webterminal
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../end/">
+            
+                <a href="../../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >安装etcd集群</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x83B7;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;">&#x83B7;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</h1>
+<pre><code>wget https://github.com/coreos/etcd/releases/download/v3.2.12/etcd-v3.2.12-linux-amd64.tar.gz
+tar xf etcd-v3.2.12-linux-arm64.tar.gz
+cp  etcd-v3.2.12-linux-amd64/{etcd,etcdctl} /usr/local/bin/
+</code></pre><h1 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h1>
+<h4 id="&#x670D;&#x52A1;&#x6587;&#x4EF6;&#x914D;&#x7F6E;">&#x670D;&#x52A1;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</h4>
+<pre><code>cat  /usr/lib/systemd/system/etcd.service
+[Unit]
+Description=Etcd Server
+After=network.target
+After=network-online.target
+Wants=network-online.target
+Documentation=https://github.com/coreos
+
+[Service]
+Type=notify
+WorkingDirectory=/var/lib/etcd/
+EnvironmentFile=-/etc/etcd/etcd.conf
+ExecStart=/usr/local/bin/etcd \
+  --name ${ETCD_NAME} \
+  --cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
+  --peer-cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --peer-key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
+  --trusted-ca-file=/etc/kubernetes/ssl/ca.pem \
+  --peer-trusted-ca-file=/etc/kubernetes/ssl/ca.pem \
+  --initial-advertise-peer-urls ${ETCD_INITIAL_ADVERTISE_PEER_URLS} \
+  --listen-peer-urls ${ETCD_LISTEN_PEER_URLS} \
+  --listen-client-urls ${ETCD_LISTEN_CLIENT_URLS},https://127.0.0.1:4001 \
+  --advertise-client-urls ${ETCD_ADVERTISE_CLIENT_URLS} \
+  --initial-cluster-token ${ETCD_INITIAL_CLUSTER_TOKEN} \
+  --initial-cluster infra1=https://${ETCD_NODE1}:7001,infra2=https://${ETCD_NODE2}:7001,infra3=https://${ETCD_NODE3}:7001 \
+  --initial-cluster-state new \
+  --data-dir=${ETCD_DATA_DIR}
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<pre><code>mkdir /etc/etcd
+cat &gt; /etc/etcd/etcd.conf &lt;&lt;EOF
+ETCD_NAME=infra1
+ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+ETCD_LISTEN_PEER_URLS=&quot;https://172.26.6.1:7001&quot;
+ETCD_LISTEN_CLIENT_URLS=&quot;https://172.26.6.1:4001&quot;
+ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;https://172.26.6.1:7001&quot;
+ETCD_INITIAL_CLUSTER_TOKEN=&quot;etcd-cluster&quot;
+ETCD_ADVERTISE_CLIENT_URLS=&quot;https://172.26.6.1:4001&quot;
+
+ETCD_NODE1=172.26.6.1
+ETCD_NODE2=172.26.6.2
+ETCD_NODE3=172.26.6.3
+EOF
+</code></pre><h4 id="&#x542F;&#x52A8;">&#x542F;&#x52A8;</h4>
+<pre><code>mkdir /var/lib/etcd/
+systemctl daemon-reload
+systemctl enable etcd
+systemctl start etcd
+systemctl status etcd
+</code></pre><h4 id="&#x67E5;&#x770B;&#x72B6;&#x6001;">&#x67E5;&#x770B;&#x72B6;&#x6001;</h4>
+<pre><code>etcdctl --endpoints=https://172.26.6.1:4001,https://172.26.6.2:4001,https://172.26.6.3:4001   --ca-file=/etc/kubernetes/ssl/ca.pem   --cert-file=/etc/kubernetes/ssl/kubernetes.pem   --key-file=/etc/kubernetes/ssl/kubernetes-key.pem cluster-health
+</code></pre><h4 id="&#x6D4F;&#x89C8;etcd&#x6570;&#x636E;">&#x6D4F;&#x89C8;etcd&#x6570;&#x636E;</h4>
+<p>etcd v2</p>
+<pre><code>etcdctl --endpoints=https://172.26.6.1:4001,https://172.26.6.2:4001,https://172.26.6.3:4001   --ca-file=/etc/kubernetes/ssl/ca.pem   --cert-file=/etc/kubernetes/ssl/kubernetes.pem   --key-file=/etc/kubernetes/ssl/kubernetes-key.pem ls /
+</code></pre><p>etcd v3</p>
+<pre><code>ETCDCTL_API=3 etcdctl --endpoints=https://172.26.6.1:4001,https://172.26.6.2:4001,https://172.26.6.3:4001   --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/kubernetes/ssl/kubernetes.pem   --key=/etc/kubernetes/ssl/kubernetes-key.pem get / --prefix
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gencerts.html" class="navigation navigation-prev " aria-label="Previous page: 生成证书">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="install-master.html" class="navigation navigation-next " aria-label="Next page: 安装master节点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装etcd集群","level":"1.6.1.2","depth":3,"next":{"title":"安装master节点","level":"1.6.1.3","depth":3,"path":"install/binary-install/install-master.md","ref":"install/binary-install/install-master.md","articles":[]},"previous":{"title":"生成证书","level":"1.6.1.1","depth":3,"path":"install/binary-install/gencerts.md","ref":"install/binary-install/gencerts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install/binary-install/install-etcd.md","mtime":"2017-12-23T05:54:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-24T04:51:46.298Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
