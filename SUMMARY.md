@@ -14,8 +14,8 @@
         * [安装master节点](install/binary-install/install-master.md)
         * [安装node节点](install/binary-install/install-node.md)
     * [插件安装]
-        * [安装kube-router](install/plugins/install-kube-router.md)
-        * [安装kube-proxy](install/plugins/install-kube-proxy.md)
+        * [安装kube-router](install/addons/install-kube-router.md)
+        * [安装kube-proxy](install/addons/install-kube-proxy.md)
   [存储](storage/README.md)
     * [glusterfs](storage/gluster-storage.md)
     * [nfs](storage/nfs-strorage.md)

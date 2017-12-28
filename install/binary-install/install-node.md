@@ -44,6 +44,7 @@ EOF
 #### 配置flannel
 
 - 参数配置
+
 ```
 cat > /etc/sysconfig/flanneld <<EOF
 # Flanneld configuration options
@@ -162,6 +163,7 @@ WantedBy=multi-user.target
 - 参数配置文件
 
 fail-swap-on参数在启用swap时候需要添加，不然就需要卸载swap
+
 ```
 cat > /etc/kubernetes/kubelet <<EOF
 ###

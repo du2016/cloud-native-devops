@@ -25,6 +25,8 @@ WantedBy=multi-user.target
 
 #### 参数配置文件
 
+- 使用iptables
+
 ```
 cat > /etc/kubernetes/proxy << EOF
 ###
@@ -34,7 +36,21 @@ cat > /etc/kubernetes/proxy << EOF
 
 # Add your own!
 KUBE_PROXY_ARGS="--hostname-override=172.26.6.1 --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig --cluster-cidr=10.254.0.0/16"
-#enable ipvs 需要安装ipset命令
+EOF
+```
+
+- 使用lvs
+
+使用 ipvs 需要安装ipset命令
+```
+yum install ipset
+cat > /etc/kubernetes/proxy << EOF
+###
+# kubernetes proxy config
+
+# default config should be adequate
+
+# Add your own!
 #KUBE_PROXY_ARGS="--hostname-override=172.26.6.1 --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig --cluster-cidr=10.254.0.0/16 --masquerade-all --feature-gates=SupportIPVSProxyMode=true --proxy-mode=ipvs --ipvs-min-sync-period=5s --ipvs-sync-period=5s  --ipvs-scheduler=rr"
 
 EOF

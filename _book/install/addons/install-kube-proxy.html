@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>生成证书 · GitBook</title>
+        <title>安装kube-proxy · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="install-etcd.html" />
+    <link rel="next" href="../../storage/gluster-storage.html" />
     
     
-    <link rel="prev" href="get-binary.html" />
+    <link rel="prev" href="install-kube-router.html" />
     
 
     </head>
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../binary-install/">
             
-                <a href="./">
+                <a href="../binary-install/">
             
                     
                     安装部署
@@ -200,9 +200,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="get-binary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../binary-install/get-binary.html">
             
-                <a href="get-binary.html">
+                <a href="../binary-install/get-binary.html">
             
                     
                     二进制安装部署
@@ -214,9 +214,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1.1" data-path="gencerts.html">
+        <li class="chapter " data-level="1.6.1.1" data-path="../binary-install/gencerts.html">
             
-                <a href="gencerts.html">
+                <a href="../binary-install/gencerts.html">
             
                     
                     生成证书
@@ -227,9 +227,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.1.2" data-path="install-etcd.html">
+        <li class="chapter " data-level="1.6.1.2" data-path="../binary-install/install-etcd.html">
             
-                <a href="install-etcd.html">
+                <a href="../binary-install/install-etcd.html">
             
                     
                     安装etcd集群
@@ -240,9 +240,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.1.3" data-path="install-master.html">
+        <li class="chapter " data-level="1.6.1.3" data-path="../binary-install/install-master.html">
             
-                <a href="install-master.html">
+                <a href="../binary-install/install-master.html">
             
                     
                     安装master节点
@@ -253,9 +253,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.1.4" data-path="install-node.html">
+        <li class="chapter " data-level="1.6.1.4" data-path="../binary-install/install-node.html">
             
-                <a href="install-node.html">
+                <a href="../binary-install/install-node.html">
             
                     
                     安装node节点
@@ -285,9 +285,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.2.1" data-path="../addons/install-kube-router.html">
+        <li class="chapter " data-level="1.6.2.1" data-path="install-kube-router.html">
             
-                <a href="../addons/install-kube-router.html">
+                <a href="install-kube-router.html">
             
                     
                     安装kube-router
@@ -298,9 +298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2.2" data-path="../addons/install-kube-proxy.html">
+        <li class="chapter active" data-level="1.6.2.2" data-path="install-kube-proxy.html">
             
-                <a href="../addons/install-kube-proxy.html">
+                <a href="install-kube-proxy.html">
             
                     
                     安装kube-proxy
@@ -435,7 +435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >生成证书</a>
+        <a href="../.." >安装kube-proxy</a>
     </h1>
 </div>
 
@@ -450,154 +450,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x751F;&#x6210;&#x8BC1;&#x4E66;">&#x751F;&#x6210;&#x8BC1;&#x4E66;</h1>
-<p><a href="https://kubernetes.io/docs/concepts/cluster-administration/certificates/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
-<h1 id="cfssl&#x65B9;&#x5F0F;">cfssl&#x65B9;&#x5F0F;</h1>
-<h4 id="cfssl&#x4E0B;&#x8F7D;&#x5730;&#x5740;">cfssl&#x4E0B;&#x8F7D;&#x5730;&#x5740;</h4>
-<pre><code>VERSION=R1.2
-for i in {cfssl,cfssljson,cfssl-certinfo}
-do
-wget https://pkg.cfssl.org/${VERSION}/${i}_linux-amd64 -O /usr/local/bin/${i}
-done
-</code></pre><h4 id="&#x521B;&#x5EFA;ca&#x8BC1;&#x4E66;">&#x521B;&#x5EFA;CA&#x8BC1;&#x4E66;</h4>
+                                <h1 id="&#x5B89;&#x88C5;kube-proxy">&#x5B89;&#x88C5;kube-proxy</h1>
+<h4 id="&#x670D;&#x52A1;&#x6587;&#x4EF6;">&#x670D;&#x52A1;&#x6587;&#x4EF6;</h4>
+<pre><code>/usr/lib/systemd/system/kube-proxy.service
+[Unit]
+Description=Kubernetes Kube-Proxy Server
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/proxy
+ExecStart=/usr/local/bin/kube-proxy \
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_MASTER \
+        $KUBE_PROXY_ARGS
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h4 id="&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
 <ul>
-<li>&#x751F;&#x6210;CA&#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code>mkdir ssl &amp;&amp; cd ssl
-cfssl print-defaults config &gt; config.json
-cfssl print-defaults csr &gt; csr.json
-cat &gt; ca-config.json &lt;&lt;EOF
-{
-&quot;signing&quot;: {
-  &quot;default&quot;: {
-    &quot;expiry&quot;: &quot;87600h&quot;
-  },
-  &quot;profiles&quot;: {
-    &quot;kubernetes&quot;: {
-      &quot;usages&quot;: [
-          &quot;signing&quot;,
-          &quot;key encipherment&quot;,
-          &quot;server auth&quot;,
-          &quot;client auth&quot;
-      ],
-      &quot;expiry&quot;: &quot;87600h&quot;
-    }
-  }
-}
-}
-EOF
-</code></pre></li>
-<li>&#x751F;&#x6210;CA&#x7B7E;&#x540D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x4F7F;&#x7528;iptables</li>
 </ul>
-<pre><code>cat &gt; ca-csr.json &lt;&lt; EOF
-{
-  &quot;CN&quot;: &quot;kubernetes&quot;,
-  &quot;key&quot;: {
-    &quot;algo&quot;: &quot;rsa&quot;,
-    &quot;size&quot;: 2048
-  },
-  &quot;names&quot;:[{
-    &quot;C&quot;: &quot;CN&quot;,
-    &quot;ST&quot;: &quot;Beijing&quot;,
-    &quot;L&quot;: &quot;BeiJing&quot;,
-    &quot;O&quot;: &quot;k8s&quot;,
-    &quot;OU&quot;: &quot;System&quot;
-  }]
-}
-EOF
-</code></pre><ul>
-<li>&#x751F;&#x6210;&#x79C1;&#x94A5;&#x548C;&#x8BC1;&#x4E66;</li>
-</ul>
-<pre><code>cfssl gencert -initca ca-csr.json | cfssljson -bare ca
-</code></pre><ul>
-<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x751F;&#x6210;API Server&#x7684;&#x5BC6;&#x94A5;&#x548C;&#x8BC1;&#x4E66;&#x7684;JSON&#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code>cat &gt; kubernetes-csr.json &lt;&lt;EOF
-{
-&quot;CN&quot;: &quot;kubernetes&quot;,
-&quot;hosts&quot;: [
-  &quot;127.0.0.1&quot;,
-  &quot;&lt;MASTER_IP&gt;&quot;,
-  &quot;&lt;MASTER_CLUSTER_IP&gt;&quot;,
-  &quot;kubernetes&quot;,
-  &quot;kubernetes.default&quot;,
-  &quot;kubernetes.default.svc&quot;,
-  &quot;kubernetes.default.svc.cluster&quot;,
-  &quot;kubernetes.default.svc.cluster.local&quot;
-],
-&quot;key&quot;: {
-  &quot;algo&quot;: &quot;rsa&quot;,
-  &quot;size&quot;: 2048
-},
-&quot;names&quot;: [{
-  &quot;C&quot;: &quot;CN&quot;,
-  &quot;ST&quot;: &quot;Beijing&quot;,
-  &quot;L&quot;: &quot;BeiJing&quot;,
-  &quot;O&quot;: &quot;k8s&quot;,
-  &quot;OU&quot;: &quot;System&quot;
-}]
-} 
-EOF
-#&#x8BE5;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x5305;&#x542B;&#x6240;&#x6709;&#x4F7F;&#x7528;&#x8BE5;&#x8BC1;&#x4E66;&#x7684;ip&#x548C;&#x57DF;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x5305;&#x62EC;etcd&#x96C6;&#x7FA4;&#x3001;kubernetes master&#x96C6;&#x7FA4;&#x3001;&#x4EE5;&#x53CA;apiserver &#x96C6;&#x7FA4;&#x5185;&#x90E8;cluster ip&#x3002;
-</code></pre></li>
-<li>&#x751F;&#x6210; kubernetes &#x8BC1;&#x4E66;&#x548C;&#x79C1;&#x94A5;</li>
-</ul>
-<pre><code>cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes kubernetes-csr.json | cfssljson -bare kubernetes
-</code></pre><ul>
-<li>&#x521B;&#x5EFA;admin&#x8BC1;&#x4E66;</li>
-</ul>
-<pre><code>cat &gt; admin-csr.json &lt;&lt;EOF
-{
-  &quot;CN&quot;: &quot;admin&quot;,
-  &quot;hosts&quot;: [],
-  &quot;key&quot;: {
-    &quot;algo&quot;: &quot;rsa&quot;,
-    &quot;size&quot;: 2048
-  },
-  &quot;names&quot;: [
-    {
-      &quot;C&quot;: &quot;CN&quot;,
-      &quot;ST&quot;: &quot;BeiJing&quot;,
-      &quot;L&quot;: &quot;BeiJing&quot;,
-      &quot;O&quot;: &quot;system:masters&quot;,
-      &quot;OU&quot;: &quot;System&quot;
-    }
-  ]
-}
-EOF
+<pre><code>cat &gt; /etc/kubernetes/proxy &lt;&lt; EOF
+###
+# kubernetes proxy config
 
-cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes admin-csr.json | cfssljson -bare admin
-# &#x8BC1;&#x4E66;O&#x914D;&#x7F6E;&#x4E3A;system:masters &#x5728;&#x96C6;&#x7FA4;&#x5185;&#x90E8;cluster-admin&#x7684;clusterrolebinding&#x5C06;system:masters&#x7EC4;&#x548C;cluster-admin clusterrole&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;
-</code></pre><ul>
-<li>&#x521B;&#x5EFA;kube-proxy&#x8BC1;&#x4E66;</li>
-</ul>
-<pre><code>cat &gt; kube-proxy-csr.json &lt;&lt; EOF
-{
-  &quot;CN&quot;: &quot;system:kube-proxy&quot;,
-  &quot;hosts&quot;: [],
-  &quot;key&quot;: {
-    &quot;algo&quot;: &quot;rsa&quot;,
-    &quot;size&quot;: 2048
-  },
-  &quot;names&quot;: [
-    {
-      &quot;C&quot;: &quot;CN&quot;,
-      &quot;ST&quot;: &quot;BeiJing&quot;,
-      &quot;L&quot;: &quot;BeiJing&quot;,
-      &quot;O&quot;: &quot;k8s&quot;,
-      &quot;OU&quot;: &quot;System&quot;
-    }
-  ]
-}
-EOF
-cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes  kube-proxy-csr.json | cfssljson -bare kube-proxy
-# &#x8BE5;&#x8BC1;&#x4E66;&#x7528;&#x6237;&#x540D;&#x4E3A;system:kube-proxy&#xFF0C;&#x9884;&#x5B9A;&#x4E49;&#x7684;system:node-proxier clusterrolebindings&#x5C06; system:kube-proxy&#x7528;&#x6237;&#x548C;system:node-proxier&#x89D2;&#x8272;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;
-</code></pre><ul>
-<li><p>&#x6821;&#x9A8C;&#x8BC1;&#x4E66;&#x4FE1;&#x606F;</p>
-<pre><code>cfssl-certinfo -cert kubernetes.pem
-openssl x509  -noout -text -in  kubernetes.pem
-</code></pre></li>
-<li><p>&#x62F7;&#x8D1D;&#x8BC1;&#x4E66;
-mkdir -p /etc/kubernetes/ssl/ &amp;&amp; cp *.pem /etc/kubernetes/ssl/</p>
-</li>
-</ul>
+# default config should be adequate
 
+# Add your own!
+KUBE_PROXY_ARGS=&quot;--hostname-override=172.26.6.1 --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig --cluster-cidr=10.254.0.0/16&quot;
+EOF
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;lvs</li>
+</ul>
+<p>&#x4F7F;&#x7528; ipvs &#x9700;&#x8981;&#x5B89;&#x88C5;ipset&#x547D;&#x4EE4;</p>
+<pre><code>yum install ipset
+cat &gt; /etc/kubernetes/proxy &lt;&lt; EOF
+###
+# kubernetes proxy config
+
+# default config should be adequate
+
+# Add your own!
+#KUBE_PROXY_ARGS=&quot;--hostname-override=172.26.6.1 --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig --cluster-cidr=10.254.0.0/16 --masquerade-all --feature-gates=SupportIPVSProxyMode=true --proxy-mode=ipvs --ipvs-min-sync-period=5s --ipvs-sync-period=5s  --ipvs-scheduler=rr&quot;
+
+EOF
+</code></pre><h4 id="&#x542F;&#x52A8;">&#x542F;&#x52A8;</h4>
+<pre><code>systemctl daemon-reload
+systemctl enable kube-proxy
+systemctl start kube-proxy
+systemctl status kube-proxy
+</code></pre>
                                 
                                 </section>
                             
@@ -624,12 +531,12 @@ mkdir -p /etc/kubernetes/ssl/ &amp;&amp; cp *.pem /etc/kubernetes/ssl/</p>
 
             
                 
-                <a href="get-binary.html" class="navigation navigation-prev " aria-label="Previous page: 二进制安装部署">
+                <a href="install-kube-router.html" class="navigation navigation-prev " aria-label="Previous page: 安装kube-router">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="install-etcd.html" class="navigation navigation-next " aria-label="Next page: 安装etcd集群">
+                <a href="../../storage/gluster-storage.html" class="navigation navigation-next " aria-label="Next page: glusterfs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -640,7 +547,7 @@ mkdir -p /etc/kubernetes/ssl/ &amp;&amp; cp *.pem /etc/kubernetes/ssl/</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"生成证书","level":"1.6.1.1","depth":3,"next":{"title":"安装etcd集群","level":"1.6.1.2","depth":3,"path":"install/binary-install/install-etcd.md","ref":"install/binary-install/install-etcd.md","articles":[]},"previous":{"title":"二进制安装部署","level":"1.6.1","depth":2,"path":"install/binary-install/get-binary.md","ref":"install/binary-install/get-binary.md","articles":[{"title":"生成证书","level":"1.6.1.1","depth":3,"path":"install/binary-install/gencerts.md","ref":"install/binary-install/gencerts.md","articles":[]},{"title":"安装etcd集群","level":"1.6.1.2","depth":3,"path":"install/binary-install/install-etcd.md","ref":"install/binary-install/install-etcd.md","articles":[]},{"title":"安装master节点","level":"1.6.1.3","depth":3,"path":"install/binary-install/install-master.md","ref":"install/binary-install/install-master.md","articles":[]},{"title":"安装node节点","level":"1.6.1.4","depth":3,"path":"install/binary-install/install-node.md","ref":"install/binary-install/install-node.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install/binary-install/gencerts.md","mtime":"2017-12-25T02:51:05.450Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-25T05:51:02.846Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装kube-proxy","level":"1.6.2.2","depth":3,"next":{"title":"glusterfs","level":"1.6.3","depth":2,"path":"storage/gluster-storage.md","ref":"storage/gluster-storage.md","articles":[]},"previous":{"title":"安装kube-router","level":"1.6.2.1","depth":3,"path":"install/addons/install-kube-router.md","ref":"install/addons/install-kube-router.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install/addons/install-kube-proxy.md","mtime":"2017-12-25T06:10:46.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-25T05:51:02.846Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

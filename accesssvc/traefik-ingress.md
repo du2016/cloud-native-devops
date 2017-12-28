@@ -1,49 +1,64 @@
-```
-cat traefik.yaml
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: traefik-ingress-lb
-  namespace: kube-system
-  labels:
-    k8s-app: traefik-ingress-lb
-spec:
-  template:
-    metadata:
-      labels:
-        k8s-app: traefik-ingress-lb
-        name: traefik-ingress-lb
-    spec:
-      terminationGracePeriodSeconds: 60
-      hostNetwork: true
-      restartPolicy: Always
-      serviceAccountName: ingress
-      containers:
-      - image: traefik
-        name: traefik-ingress-lb
-        resources:
-          limits:
-            cpu: 200m
-            memory: 30Mi
-          requests:
-            cpu: 100m
-            memory: 20Mi
-        ports:
-        - name: http
-          containerPort: 80
-          hostPort: 80
-        - name: admin
-          containerPort: 8580
-          hostPort: 8580
-        args:
-        - --web
-        - --web.address=:8580
-        - --kubernetes
-```
+[Traefik](https://traefik.io/) 是一款开源的反向代理与负载均衡工具，它监听后端的变化并自动更新服务配置。Traefik 最大的优点是能够与常见的微服务系统直接整合，可以实现自动化动态配置。目前支持 Docker、Swarm,、Mesos/Marathon、Mesos、Kubernetes、Consul、Etcd、Zookeeper、BoltDB 和 Rest API 等后端模型
+
+![](https://docs.traefik.io/img/architecture.png)
+
+[]traefik on k8s文档](https://docs.traefik.io/configuration/backends/kubernetes/)
+- rbac 配置
 
 ```
-cat > traefik-ingree.yaml << EOF
-cat sv.yaml
+https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-rbac.yaml
+
+echo '
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: traefik-ingress-controller
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - services
+      - endpoints
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - get
+      - list
+      - watch
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: traefik-ingress-controller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik-ingress-controller
+subjects:
+- kind: ServiceAccount
+  name: traefik-ingress-controller
+  namespace: kube-system' | kubectl apply -f -
+```
+
+#### deploy 安装
+kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-deployment.yaml
+
+#### daemonset 安装
+kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-ds.yaml
+
+#### 暴露自身
+
+```
+kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/ui.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -53,47 +68,88 @@ spec:
   selector:
     k8s-app: traefik-ingress-lb
   ports:
-  - name: web
-    port: 80
-    targetPort: 8580
+  - port: 80
+    targetPort: 8080
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: traefik-web-ui
   namespace: kube-system
+  annotations:
+    kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: traefik-ui.local
+  - host: traefik-ui.minikube
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: traefik-web-ui
-          servicePort: web
-EOF
+          servicePort: 80
 ```
+
+#### 认证
+
+```
+htpasswd -c ./auth myusername
+kubectl create secret generic mysecret --from-file auth --namespace=monitoring
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: prometheus-dashboard
+ namespace: monitoring
+ annotations:
+   kubernetes.io/ingress.class: traefik
+   ingress.kubernetes.io/auth-type: "basic"
+   ingress.kubernetes.io/auth-secret: "mysecret"
+spec:
+ rules:
+ - host: dashboard.prometheus.example.com
+   http:
+     paths:
+     - backend:
+         serviceName: prometheus
+         servicePort: 9090
+```
+
+#### traefik 支持基于名称路由基于path路由
+
+#### 权重设置
 
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: traefik-ingress
-  namespace: default
+  name: wildcard-cheeses
+  annotations:
+    traefik.frontend.priority: "1"
 spec:
   rules:
-  - host: traefik.nginx.io
+  - host: *.minikube
     http:
       paths:
       - path: /
         backend:
-          serviceName: my-nginx
-          servicePort: 80
-  - host: traefik.frontend.io
+          serviceName: stilton
+          servicePort: http
+
+kind: Ingress
+metadata:
+  name: specific-cheeses
+  annotations:
+    traefik.frontend.priority: "2"
+spec:
+  rules:
+  - host: specific.minikube
     http:
       paths:
       - path: /
         backend:
-          serviceName: frontend
-          servicePort: 80
+          serviceName: stilton
+          servicePort: http
 ```
+
+#### 禁止header传递
+disablePassHostHeaders = true #全局
+添加注释 traefik.frontend.passHostHeader: "false"
