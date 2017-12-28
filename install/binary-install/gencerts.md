@@ -1,7 +1,13 @@
 # 生成证书
 
+三种方式，实际上都是openssl
+
+* cfssl
+* easyrsa
+* openssl
+
 [官方文档](https://kubernetes.io/docs/concepts/cluster-administration/certificates/)
-# cfssl方式
+## cfssl方式
 
 #### cfssl下载地址
 
@@ -164,3 +170,87 @@ openssl x509  -noout -text -in  kubernetes.pem
 
 - 拷贝证书
 mkdir -p /etc/kubernetes/ssl/ && cp *.pem /etc/kubernetes/ssl/
+
+## easyrsa
+
+```
+curl -L -O https://storage.googleapis.com/kubernetes-release/easy-rsa/easy-rsa.tar.gz
+tar xzf easy-rsa.tar.gz
+cd easy-rsa-master/easyrsa3
+./easyrsa init-pki
+./easyrsa --batch "--req-cn=172.26.6.1@`date +%s`" build-ca nopass
+```
+
+生成 kubernetes 证书和私钥
+
+```
+./easyrsa --subject-alt-name="IP:172.26.6.1,IP:10.254.0.1,DNS:kubernetes.default" build-server-full kubernetes-master nopass
+```
+
+签发admin证书
+
+```
+./easyrsa --dn-mode=org --req-cn=admin --req-org=system:masters --req-c= --req-st= --req-city= --req-email= --req-ou= build-client-full admin nopass
+```
+
+## openssl
+
+- 生成ca
+
+```
+openssl genrsa -out ca.key 2048
+openssl req -x509 -new -nodes -key ca.key -subj "/CN=172.26.6.1" -days 10000 -out ca.crt
+```
+
+- kubernetes 证书和私钥
+
+```
+openssl genrsa -out server.key 2048
+cat >csr.conf <<EOF
+[ req ]
+default_bits = 2048
+prompt = no
+default_md = sha256
+req_extensions = req_ext
+distinguished_name = dn
+    
+[ dn ]
+C = <country>
+ST = <state>
+L = <city>
+O = <organization>
+OU = <organization unit>
+CN = 172.26.6.1
+    
+[ req_ext ]
+subjectAltName = @alt_names
+    
+[ alt_names ]
+DNS.1 = kubernetes
+DNS.2 = kubernetes.default
+DNS.3 = kubernetes.default.svc
+DNS.4 = kubernetes.default.svc.cluster
+DNS.5 = kubernetes.default.svc.cluster.local
+IP.1 = 172.26.6.1
+IP.2 = 10.254.0.1
+    
+[ v3_ext ]
+authorityKeyIdentifier=keyid,issuer:always
+basicConstraints=CA:FALSE
+keyUsage=keyEncipherment,dataEncipherment
+extendedKeyUsage=serverAuth,clientAuth
+subjectAltName=@alt_names
+EOF
+
+openssl req -new -key server.key -out server.csr -config csr.conf
+openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 10000 -extensions v3_ext -extfile csr.conf
+openssl x509  -noout -text -in ./server.crt
+```
+
+- admin证书
+
+```
+openssl genrsa -out admin.key 2048
+openssl req -new -key admin.key -out admin.csr -subj "/O=system:masters/CN=dmin"
+openssl x509 -req -set_serial $(date +%s%N) -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt -days 365 -extensions v3_req -extfile req.conf
+```
