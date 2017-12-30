@@ -1,0 +1,20 @@
+
+
+
+
+
+
+apiserver ----> node
+node-monitor-period 检查node---->40s(ConditionUnknown)---->pod-eviction-timeout(5m del pods)----->node-eviction-rate
+
+
+node-monitor-period 检查node频率 
+pod-eviction-timeout pod删除时间  5m
+node-eviction-rate 删除频率  默认0.1
+
+超过unhealthy-zone-threshold 0.55（不健康比例）
+large-cluster-size-threshold集群大小
+降低删除速率至 secondary-node-eviction-rate
+
+kubectl cordon $NODENAME标记为不可调用
+kubectl taint  $NODENAME驱逐

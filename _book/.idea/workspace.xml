@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1204068-a1f9-4dd6-a350-5b7b2e59af4f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/install/addons/install-dns.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="babf2a95-62ff-43bb-86d1-593e68e3a3e4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/architecture/image/k8s-ha.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cloudnative/cloudnativedesign.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/install/addons/weave-scope.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/install/kubespray/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/install/salt/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/CNI-cenie.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/bgp.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/cilium.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/contiv.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/ospf.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/network/romana.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/object/annotations/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/object/certificatesigningrequests/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/object/labels/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/object/nodes/README.md" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/SUMMARY.md" afterPath="$PROJECT_DIR$/SUMMARY.md" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" afterPath="$PROJECT_DIR$/_book/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_book/accesssvc/nginx-ingress-controller.md" afterPath="$PROJECT_DIR$/_book/accesssvc/nginx-ingress-controller.md" />
-      <change beforePath="$PROJECT_DIR$/_book/accesssvc/traefik-ingress.md" afterPath="$PROJECT_DIR$/_book/accesssvc/traefik-ingress.md" />
       <change beforePath="$PROJECT_DIR$/_book/architecture/index.html" afterPath="$PROJECT_DIR$/_book/architecture/index.html" />
+      <change beforePath="$PROJECT_DIR$/_book/cloudnative/README.md" afterPath="$PROJECT_DIR$/_book/cloudnative/README.md" />
+      <change beforePath="$PROJECT_DIR$/_book/develop/develop-web-terminal.html" afterPath="$PROJECT_DIR$/_book/develop/develop-web-terminal.html" />
+      <change beforePath="$PROJECT_DIR$/_book/develop/self-develop-scheduler.html" afterPath="$PROJECT_DIR$/_book/develop/self-develop-scheduler.html" />
+      <change beforePath="$PROJECT_DIR$/_book/end/index.html" afterPath="$PROJECT_DIR$/_book/end/index.html" />
       <change beforePath="$PROJECT_DIR$/_book/getstart/index.html" afterPath="$PROJECT_DIR$/_book/getstart/index.html" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" afterPath="$PROJECT_DIR$/_book/index.html" />
+      <change beforePath="$PROJECT_DIR$/_book/install/addons/install-heapster-influxdb-grafana.md" afterPath="$PROJECT_DIR$/_book/install/addons/install-heapster-influxdb-grafana.md" />
+      <change beforePath="$PROJECT_DIR$/_book/install/addons/install-kube-proxy.html" afterPath="$PROJECT_DIR$/_book/install/addons/install-kube-proxy.html" />
+      <change beforePath="$PROJECT_DIR$/_book/install/addons/install-kube-router.html" afterPath="$PROJECT_DIR$/_book/install/addons/install-kube-router.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/gencerts.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/gencerts.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/get-binary.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/get-binary.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/index.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/index.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/install-etcd.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/install-etcd.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/install-master.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/install-master.html" />
       <change beforePath="$PROJECT_DIR$/_book/install/binary-install/install-node.html" afterPath="$PROJECT_DIR$/_book/install/binary-install/install-node.html" />
-      <change beforePath="$PROJECT_DIR$/_book/install/plugins/install-dashboard.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_book/install/plugins/install-heapster-influxdb-grafana.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_book/install/plugins/install-kubedns.md" afterPath="" />
       <change beforePath="$PROJECT_DIR$/_book/introduce/introduce-k8s.html" afterPath="$PROJECT_DIR$/_book/introduce/introduce-k8s.html" />
+      <change beforePath="$PROJECT_DIR$/_book/network/calico.md" afterPath="$PROJECT_DIR$/_book/network/calico.md" />
+      <change beforePath="$PROJECT_DIR$/_book/network/canal.md" afterPath="$PROJECT_DIR$/_book/network/canal.md" />
+      <change beforePath="$PROJECT_DIR$/_book/network/flanneld.md" afterPath="$PROJECT_DIR$/_book/network/flanneld.md" />
+      <change beforePath="$PROJECT_DIR$/_book/network/weave.md" afterPath="$PROJECT_DIR$/_book/network/weave.md" />
       <change beforePath="$PROJECT_DIR$/_book/object/index.html" afterPath="$PROJECT_DIR$/_book/object/index.html" />
-      <change beforePath="$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md" afterPath="$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md" />
-      <change beforePath="$PROJECT_DIR$/accesssvc/traefik-ingress.md" afterPath="$PROJECT_DIR$/accesssvc/traefik-ingress.md" />
-      <change beforePath="$PROJECT_DIR$/install/binary-install/install-node.md" afterPath="$PROJECT_DIR$/install/binary-install/install-node.md" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-coredns.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-dashboard.md" afterPath="$PROJECT_DIR$/install/addons/install-dashboard.md" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-heapster-influxdb-grafana.md" afterPath="$PROJECT_DIR$/install/addons/install-fluentd-es.md" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-kube-dns.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" afterPath="$PROJECT_DIR$/install/addons/install-kube-proxy.md" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-kube-router.md" afterPath="$PROJECT_DIR$/install/addons/install-kube-router.md" />
-      <change beforePath="$PROJECT_DIR$/install/plugins/install-kubedns.md" afterPath="$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md" />
+      <change beforePath="$PROJECT_DIR$/_book/search_index.json" afterPath="$PROJECT_DIR$/_book/search_index.json" />
+      <change beforePath="$PROJECT_DIR$/_book/storage/gluster-storage.html" afterPath="$PROJECT_DIR$/_book/storage/gluster-storage.html" />
+      <change beforePath="$PROJECT_DIR$/_book/storage/nfs-strorage.html" afterPath="$PROJECT_DIR$/_book/storage/nfs-strorage.html" />
+      <change beforePath="$PROJECT_DIR$/architecture/README.md" afterPath="$PROJECT_DIR$/architecture/README.md" />
+      <change beforePath="$PROJECT_DIR$/cloudnative/README.md" afterPath="$PROJECT_DIR$/cloudnative/README.md" />
+      <change beforePath="$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md" afterPath="$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md" />
+      <change beforePath="$PROJECT_DIR$/introduce/introduce-k8s.md" afterPath="$PROJECT_DIR$/introduce/introduce-k8s.md" />
+      <change beforePath="$PROJECT_DIR$/network/README.md" afterPath="$PROJECT_DIR$/network/README.md" />
+      <change beforePath="$PROJECT_DIR$/network/calico.md" afterPath="$PROJECT_DIR$/network/calico.md" />
+      <change beforePath="$PROJECT_DIR$/network/canal.md" afterPath="$PROJECT_DIR$/network/canal.md" />
+      <change beforePath="$PROJECT_DIR$/network/flanneld.md" afterPath="$PROJECT_DIR$/network/flanneld.md" />
+      <change beforePath="$PROJECT_DIR$/network/weave.md" afterPath="$PROJECT_DIR$/network/weave.md" />
+      <change beforePath="$PROJECT_DIR$/object/README.md" afterPath="$PROJECT_DIR$/object/README.md" />
     </list>
-    <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +64,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="install-kube-router.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-kube-router.md">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/architecture/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -56,103 +78,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install-kube-proxy.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-kube-proxy.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="810">
-                <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-dns.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-dns.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="630">
-                <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-fluentd-es.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-fluentd-es.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="414">
-                <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loadbalance.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accesssvc/loadbalance.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nginx-ingress-controller.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1131">
-                <caret line="157" column="6" lean-forward="false" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="traefik-ingress.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/accesssvc/traefik-ingress.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-dashboard.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-dashboard.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="162">
-                <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install-heapster-influxdb-grafana.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="378">
-                <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <first_editor relative-caret-position="306">
+                <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -164,8 +95,73 @@
         <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
+              <first_editor relative-caret-position="378">
+                <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/annotations/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="306">
+                <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/labels/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="252">
+                <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/object/nodes/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
               <first_editor relative-caret-position="342">
-                <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+                <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pods-qos.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/pods/pods-qos.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/pods/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -175,83 +171,43 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Go File" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wget</find>
-      <find>overlay2</find>
-      <find>$</find>
-      <find>KUBE_ETCD_SERVERS</find>
-      <find>kube-controller-manager配置</find>
-      <find>flannel</find>
-      <find>head -c 16 /dev/urandom | od -An -t x | tr -d ' '</find>
-      <find>ETCD_INITIAL_ADVERTISE_PEER_URLS</find>
-      <find>token</find>
-      <find>bootstrap.kubeconfig</find>
-      <find>use-service-account-credentials</find>
-      <find>/etc/sysconfig/flanneld</find>
-      <find>EOF</find>
-      <find>enable-vts-status</find>
+      <find>addon</find>
     </findStrings>
-    <replaceStrings>
-      <replace>\$</replace>
-    </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/object/annotations</dir>
     </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/install/README.md" />
-        <option value="$PROJECT_DIR$/storage/nfs-strorage.md" />
-        <option value="$PROJECT_DIR$/develop/self-develop-scheduler.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/get-binary.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install-etcd.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/gencerts.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install-netwrok.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install-kube-router.md" />
-        <option value="$PROJECT_DIR$/install/kops-install/README.md" />
-        <option value="$PROJECT_DIR$/develop/develop-web-terminal.md" />
-        <option value="$PROJECT_DIR$/install/minikube/README.md" />
-        <option value="$PROJECT_DIR$/develop/develop-clientset.md.go" />
-        <option value="$PROJECT_DIR$/develop/develop-clientset.md.md" />
-        <option value="$PROJECT_DIR$/develop/develop-clientset.md" />
-        <option value="$PROJECT_DIR$/develop/dynamicclient.md" />
-        <option value="$PROJECT_DIR$/develop/develop-restclient.md" />
-        <option value="$PROJECT_DIR$/develop/develop-dynamiclient.md" />
-        <option value="$PROJECT_DIR$/SUMMARY.md" />
-        <option value="$PROJECT_DIR$/install/kubeadm-install/README.md" />
-        <option value="$PROJECT_DIR$/network/canal.md" />
+        <option value="$PROJECT_DIR$/network/README.md" />
+        <option value="$PROJECT_DIR$/cloudnative/README.md" />
+        <option value="$PROJECT_DIR$/install/kubespray/README.md" />
+        <option value="$PROJECT_DIR$/network/CNI-cenie.md" />
         <option value="$PROJECT_DIR$/network/calico.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/README.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/genkubeconfig.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install-master.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-proxy.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-dns.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-coredns.md" />
-        <option value="$PROJECT_DIR$/install/plugins/install-kube-router.md" />
-        <option value="$PROJECT_DIR$/install/binary-install/install-node.md" />
-        <option value="$PROJECT_DIR$/install/addons/install-kube-dns.md" />
-        <option value="$PROJECT_DIR$/install/addons/install-kube-proxy.md" />
-        <option value="$PROJECT_DIR$/install/addons/install-dashboard.md" />
+        <option value="$PROJECT_DIR$/network/canal.md" />
+        <option value="$PROJECT_DIR$/network/cilium.md" />
+        <option value="$PROJECT_DIR$/network/contiv.md" />
+        <option value="$PROJECT_DIR$/network/flanneld.md" />
+        <option value="$PROJECT_DIR$/network/romana.md" />
+        <option value="$PROJECT_DIR$/network/weave.md" />
+        <option value="$PROJECT_DIR$/install/addons/weave-scope.md" />
+        <option value="$PROJECT_DIR$/install/salt/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/introduce/introduce-k8s.md" />
         <option value="$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md" />
-        <option value="$PROJECT_DIR$/install/addons/install-dns.md" />
-        <option value="$PROJECT_DIR$/install/addons/install-fluentd-es.md" />
-        <option value="$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md" />
-        <option value="$PROJECT_DIR$/accesssvc/traefik-ingress.md" />
+        <option value="$PROJECT_DIR$/architecture/README.md" />
+        <option value="$PROJECT_DIR$/object/README.md" />
+        <option value="$PROJECT_DIR$/SUMMARY.md" />
+        <option value="$PROJECT_DIR$/object/annotations/README.md" />
+        <option value="$PROJECT_DIR$/object/labels/README.md" />
+        <option value="$PROJECT_DIR$/object/nodes/README.md" />
       </list>
     </option>
   </component>
@@ -261,11 +217,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="1280" />
-    <option name="y" value="-284" />
-    <option name="width" value="2560" />
-    <option name="height" value="1417" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -285,7 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,40 +250,26 @@
             <path>
               <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
               <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
-              <item name="accesssvc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
-              <item name="servicemesh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8s-in-action" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8s-in-action" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="object" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/dutianpeng/Desktop/k8s-in-action/install/binary-install/genkubeconfig.md" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/install/plugins" />
-      <recent name="$PROJECT_DIR$/install" />
-      <recent name="$PROJECT_DIR$/install/binary-install" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/architecture/image" />
+      <recent name="$PROJECT_DIR$/cloudnative" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,30 +288,26 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-307" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16203336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16918844" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,178 +321,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/install/binary-install/get-binary.md">
+    <entry file="file://$PROJECT_DIR$/network/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/gencerts.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="90">
+            <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-master.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/genkubeconfig.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-master.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/get-binary.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/gencerts.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-etcd.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/nfs-strorage.md" />
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install.md" />
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-netwrok.md" />
-    <entry file="file://$PROJECT_DIR$/install/kops-install/README.md" />
-    <entry file="file://$PROJECT_DIR$/getstart/README.md" />
-    <entry file="file://$PROJECT_DIR$/develop/self-develop-scheduler.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="525">
-            <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/develop/develop-web-terminal.md" />
-    <entry file="file://$PROJECT_DIR$/install/minikube/README.md" />
-    <entry file="file://$PROJECT_DIR$/develop/develop-clientset.md" />
-    <entry file="file://$PROJECT_DIR$/develop/dynamicclient.md" />
-    <entry file="file://$PROJECT_DIR$/develop/develop-restclient.md" />
-    <entry file="file://$PROJECT_DIR$/develop/develop-dynamiclient.md" />
-    <entry file="file://$PROJECT_DIR$/end/README.md" />
-    <entry file="file://$PROJECT_DIR$/architecture/README.md" />
-    <entry file="file://$PROJECT_DIR$/tools/helm/README.md" />
-    <entry file="file://$PROJECT_DIR$/storage/README.md" />
-    <entry file="file://$PROJECT_DIR$/install/kubeadm-install/README.md" />
-    <entry file="file://$PROJECT_DIR$/network/flanneld.md" />
-    <entry file="file://$PROJECT_DIR$/network/weave.md" />
-    <entry file="file://$PROJECT_DIR$/network/canal.md" />
-    <entry file="file://$PROJECT_DIR$/network/calico.md" />
-    <entry file="file://$PROJECT_DIR$/install/binary-install/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="810">
-            <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/get-binary.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="66">
-            <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-master.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1782">
-            <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="117" column="3" lean-forward="false" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/genkubeconfig.md">
+    <entry file="file://$PROJECT_DIR$/cloudnative/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="324">
@@ -566,75 +342,107 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-etcd.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1224">
-            <caret line="68" column="3" lean-forward="false" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install/binary-install/gencerts.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2952">
-            <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="6" />
+          <first_editor relative-caret-position="399">
+            <caret line="175" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="255" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/binary-install/install-node.md">
+    <entry file="file://$PROJECT_DIR$/network/calico.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="828">
-            <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+    <entry file="file://$PROJECT_DIR$/network/canal.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/cilium.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="97" lean-forward="false" selection-start-line="0" selection-start-column="97" selection-end-line="0" selection-end-column="97" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-kubedns.md">
+    <entry file="file://$PROJECT_DIR$/network/CNI-cenie.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/contiv.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/flanneld.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/romana.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="77" lean-forward="false" selection-start-line="0" selection-start-column="77" selection-end-line="0" selection-end-column="77" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/weave.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/ospf.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -645,40 +453,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md">
+    <entry file="file://$PROJECT_DIR$/network/bgp.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="378">
-            <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-kube-proxy.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="810">
-            <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/_book/install/addons/install-kube-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="594" column="172" lean-forward="false" selection-start-line="594" selection-start-column="172" selection-end-line="594" selection-end-column="172" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-kube-router.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-dashboard.md">
+    <entry file="file://$PROJECT_DIR$/install/addons/weave-scope.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="162">
@@ -689,40 +483,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-coredns.md">
+    <entry file="file://$PROJECT_DIR$/install/kubespray/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/salt/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="468">
+            <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/addons/install-heapster-influxdb-grafana.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="394">
+            <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/introduce/introduce-k8s.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="446">
+            <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/architecture/image/k8s-ha.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/architecture/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="36">
-            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+            <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-dns.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/addons/install-fluentd-es.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="414">
-            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accesssvc/loadbalance.md">
+    <entry file="file://$PROJECT_DIR$/object/certificatesigningrequests/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -733,22 +576,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accesssvc/nginx-ingress-controller.md">
+    <entry file="file://$PROJECT_DIR$/object/pods/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1131">
-            <caret line="157" column="6" lean-forward="false" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accesssvc/traefik-ingress.md">
+    <entry file="file://$PROJECT_DIR$/object/pods/pods-qos.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/annotations/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/labels/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/nodes/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="342">
-            <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />

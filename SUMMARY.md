@@ -7,6 +7,9 @@
     * 创建第一个服务k8s服务
 * [架构](architecture/README.md)
 * [对象介绍](object/README.md)
+    * [certificatesigningrequests](object/certificatesigningrequests/README.md)
+    * [pods](object/pods/README.md)
+      * [qos](object/pods/pods-qos.md)
 * [安装部署](install/binary-install/README.md)
     * [二进制安装部署](install/binary-install/get-binary.md)
         * [生成证书](install/binary-install/gencerts.md)
