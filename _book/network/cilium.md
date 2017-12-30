@@ -1,1 +1,0 @@
-Cilium 是一个 L3 网络和网络策略插件， 能够透明的实施 HTTP/API/L7 策略。 同时支持路由（routing）和叠加/封装（ overlay/encapsulation）模式。
