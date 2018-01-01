@@ -1,0 +1,1 @@
+https://k8smeetup.github.io/docs/concepts/configuration/assign-pod-node/

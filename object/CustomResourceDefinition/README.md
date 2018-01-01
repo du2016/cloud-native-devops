@@ -1,0 +1,4 @@
+CustomResourceDefinition (CRD)是一个内建的API, 它提供了一个简单的方式来创建自定义资源。
+部署一个CRD到集群中使Kubernetes API服务端开始为你指定的自定义资源服务。
+
+这使你不必再编写自己的API服务端来处理自定义资源，但是这种实现的一般性意味着比你使用API server aggregation缺乏灵活性

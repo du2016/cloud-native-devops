@@ -15,3 +15,5 @@ chmod +x kubectl && mv kubectl  /usr/local/bin
 minikube start --vm-driver vmwarefusion --docker-env HTTP_PROXY=http://xxxx --docker-env HTTPS_PROXY=https://xxxx  -v 10 --docker-opt bip=10.0.0.1/24 
 route add -net 10.0.0.1/24 ${MINIKUBE-IP}
 ```
+
+https://k8smeetup.github.io/docs/tasks/tools/install-minikube/

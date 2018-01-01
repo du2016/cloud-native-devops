@@ -1,0 +1,1 @@
+https://k8smeetup.github.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/

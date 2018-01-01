@@ -1,0 +1,1 @@
+https://k8smeetup.github.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/

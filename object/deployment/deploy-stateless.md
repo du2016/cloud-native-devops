@@ -1,0 +1,1 @@
+https://k8smeetup.github.io/docs/tasks/run-application/run-stateless-application-deployment/

@@ -18,3 +18,13 @@ init 容器：
 在服务容器启动之前运行，做一些初始化操作
 
 podpreset用于向容器注入数据
+
+
+sent kill --->删除pod默认宽限期30s -->更新宽限期--->更改为terminating状态     ---> SIGkill(if exit) ---remove from api
+                                               --->exec pre stop
+                                               ---> remove from controller
+                                               ---> kill term
+强制删除
+
+kubectl delete pods test --grace-period=0
+                                           
