@@ -30,4 +30,6 @@ EOF
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 
+### 命令参数
 
+https://k8smeetup.github.io/docs/reference/generated/kubeadm/

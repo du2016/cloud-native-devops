@@ -33,3 +33,13 @@ Kubernetes开放源代码，可让您自由地利用本地，混合或公共云�
 - 不超过总共300000个container
 - 单节点不超过100个pod
 [具体容量支持情况](https://kubernetes.io/docs/admin/cluster-large/)
+
+# 设计思想
+
+- 便携
+- 通用
+- 面向用户
+- 灵活
+- 可扩展
+- 自动化
+- 推进技术发展

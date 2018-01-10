@@ -4,8 +4,7 @@
 
 - 安装
 ```
-yum install epel* 
-yum install flannel conntrack-tools docker  -y
+yum install epel* flannel conntrack-tools docker  -y
 ```
 
 - 配置
