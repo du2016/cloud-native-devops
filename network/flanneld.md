@@ -58,3 +58,11 @@ service docker start
 #ifconfig 查看docker0是否启用flannel网段
 #多个node可以route -n查看静态路由
 ```
+
+#### 禁用masq
+
+```
+vim /usr/libexec/flannel/mk-docker-opts.sh
+修改不启动masq
+cat /usr/lib/systemd/system/flanneld.service
+```

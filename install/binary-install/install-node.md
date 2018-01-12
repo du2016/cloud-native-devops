@@ -15,7 +15,7 @@ cat > /etc/sysconfig/docker <<EOF
 # /etc/sysconfig/docker
 
 # Modify these options if you want to change the way the docker daemon runs
-OPTIONS='--selinux-enabled --log-driver=json-file --signature-verification=false -s overlay2'
+OPTIONS='--selinux-enabled --log-driver=json-file --ip-masq=false --signature-verification=false -s overlay2'
 if [ -z "${DOCKER_CERT_PATH}" ]; then
     DOCKER_CERT_PATH=/etc/docker
 fi
