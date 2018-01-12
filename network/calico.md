@@ -31,10 +31,11 @@ kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/
 ### 依赖
 
 - k8s1.7+
-- 没有其他cni插件
+- 没有其他cni插件(华为开源的[CNI-Genie](https://github.com/Huawei-PaaS/CNI-Genie)可以同时运行多个CNI)
 - --pod-network-cidr参数需要和calico ip pool保持一致
 - --service-cidr 不能和calico ip pool重叠
 
+## 部署
 
 ```
 kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
@@ -47,9 +48,10 @@ kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/
 - 暂时不支持ipam,推荐使用 host-local ipam与pod cidr结合使用
 - 默认使用node-to-node mesh模式
 - k8s1.7+
-- 没有其他cni插件
-- --pod-network-cidr参数需要和calico ip pool保持一致
-- --service-cidr 不能和calico ip pool重叠
+- 配置使用CNI
+- controller-manager配置cluster-cidr
+
+## 部署
 
 ```
 # rbac
@@ -59,13 +61,35 @@ kubectl create -f  https://docs.projectcalico.org/v3.0/getting-started/kubernete
 kubectl create -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 ```
 
-# 配置
-
-## typha
-
+## 仅适用网络策略
 
 ```
-超过50各节点推荐启用typha
+kubectl create -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubernetes-datastore/policy-only/1.7/calico.yaml
+```
+
+## [canal](https://github.com/projectcalico/canal)
+
+canal旨在让用户能够轻松地将Calico和flannel网络作为一个统一的网络解决方案进行部署.
+
+```
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/rbac.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/canal.yaml
+```
+
+# 配置
+
+## 环境设置
+```
+# etcd数据存储
+export ETCD_ENDPOINTS=http://xxx:2379
+# k8s数据存储
+export DATASTORE_TYPE=kubernetes KUBECONFIG=~/.kube/config
+```
+
+## typha模式
+
+```
+k8s数据存储模式超过50各节点推荐启用typha,Typha组件可以帮助Calico扩展到大量的节点，而不会对Kubernetes API服务器造成过度的影响。
 修改typha_service_name "none"改为"calico-typha"。
 ```
 
