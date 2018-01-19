@@ -12,32 +12,36 @@ https://github.com/kubernetes/ingress-nginx
 
 #### 部署Default backend server
 
-在部署ingress之前需要先部署Default backend server，实现了简单的ingress作为默认返回值，做了两件事
-
-- 为/提供服务，返回404
-- 在/healthz返回200
+https://github.com/kubernetes/ingress-nginx/blob/master/deploy/README.md
 
 ```
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/namespace.yaml | kubectl apply -f -
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/namespace.yaml \
+    | kubectl apply -f -
 
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/default-backend.yaml | kubectl apply -f -  
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/default-backend.yaml \
+    | kubectl apply -f -
 ```
 
-#### 暴露端口
+#### ingress cntroller
 
 ```
-kubectl expose rc default-http-backend --port=80 --target-port=8080 --name=default-http-backend 
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/configmap.yaml \
+    | kubectl apply -f -
+
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/tcp-services-configmap.yaml \
+    | kubectl apply -f -
+
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/udp-services-configmap.yaml \
+    | kubectl apply -f -
+#rbac
+
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/rbac.yaml \
+    | kubectl apply -f -
+
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/with-rbac.yaml \
+    | kubectl apply -f -
 ```
 
-#### 创建ingress controller server
-
-```
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/configmap.yaml | kubectl apply -f -
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/tcp-services-configmap.yaml | kubectl apply -f -
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/udp-services-configmap.yaml | kubectl apply -f -
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/rbac.yaml | kubectl apply -f -
-curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/with-rbac.yaml | kubectl apply -f -
-```
 
 #### 验证
 

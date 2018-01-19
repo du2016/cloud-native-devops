@@ -1,8 +1,6 @@
 [calico](https://github.com/projectcalico)是一个安全的 L3 网络和网络策略提供者。
 
-calico使用bgp的原因：
-
-[why bgp not ospf](https://www.projectcalico.org/why-bgp/)
+calico使用bgp的原因：[why bgp not ospf](https://www.projectcalico.org/why-bgp/)
 
 有关BGP [rr的介绍](http://ccie.edufly.cn/CCIEziliao/6368.html)
 
@@ -31,7 +29,7 @@ kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/
 ### 依赖
 
 - k8s1.7+
-- 没有其他cni插件(华为开源的[CNI-Genie](https://github.com/Huawei-PaaS/CNI-Genie)可以同时运行多个CNI)
+- 没有其他cni插件 (华为开源的[CNI-Genie](https://github.com/Huawei-PaaS/CNI-Genie)可以同时运行多个CNI)
 - --pod-network-cidr参数需要和calico ip pool保持一致
 - --service-cidr 不能和calico ip pool重叠
 
@@ -61,7 +59,7 @@ kubectl create -f  https://docs.projectcalico.org/v3.0/getting-started/kubernete
 kubectl create -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 ```
 
-## 仅适用网络策略
+## 仅使用网络策略
 
 ```
 kubectl create -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubernetes-datastore/policy-only/1.7/calico.yaml
@@ -123,7 +121,7 @@ calicoctl get ippool default-ipv4-ippool -o yaml
 ```
 
 
-# 配置bird服务
+## 配置bird服务
 
 ```
 yum install bird
