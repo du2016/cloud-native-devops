@@ -17,3 +17,10 @@ route add -net 10.0.0.1/24 ${MINIKUBE-IP}
 ```
 
 https://k8smeetup.github.io/docs/tasks/tools/install-minikube/
+
+
+#### 如何修改minikube的时间
+vim vendor/github.com/docker/machine/drivers/vmwarefusion/fusion_darwin.go
+
+添加以下行
+vmrun("-gu", B2DUser, "-gp", B2DPass, "runScriptInGuest", d.vmxPath(), "/bin/sh", "D=`date +%m/%d/%y` && H=`date +%H:%M:%S` && sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && sudo date -s $D && sudo date -s $H")
