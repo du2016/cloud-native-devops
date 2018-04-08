@@ -3,7 +3,7 @@
 #### centos 7 mini安装
 
 ```
-yum install vim nfs-utils wget *bin/ifconfig mlocate lezsz epel* *bin/route *bin/traceroute nc -y
+yum install vim nfs-utils wget *bin/ifconfig mlocate lrzsz epel* *bin/route *bin/traceroute nc -y
 
 ```
 

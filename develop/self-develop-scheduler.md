@@ -15,7 +15,7 @@ spec:
     image: nginx:1.10
 ```
 
-# 简单scheduler示例
+# 官方给出的shell版本scheduler示例
 ```
 #!/bin/bash
 SERVER='localhost:8001'
