@@ -1,11 +1,11 @@
+
+# 介绍
+
 restclient 是dynamic client和clientset的基础，支持json与protobuf，可以访问所有资源，实现对自定义thirdpartresource资源的获取
 
-示例代码：
+# 示例代码：
 
-
-
-
-[plain] view plain copy print?
+```
 package main  
   
 import (  
@@ -48,3 +48,4 @@ func main() {
         Do().Into(&e)  
     log.Println(e)  
 }  
+```
