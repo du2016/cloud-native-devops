@@ -1,5 +1,5 @@
 # prometheus
-![aa](./architecture.svg)
+![aa](architecture.svg)
 
 
 ## 特点

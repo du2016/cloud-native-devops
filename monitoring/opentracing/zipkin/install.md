@@ -31,4 +31,7 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 # 配置参数
 
 开启划线器
+
+```
 SCRIBE_ENABLED=true
+```
