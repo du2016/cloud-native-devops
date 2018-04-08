@@ -54,4 +54,5 @@
     * [实现webterminal](develop/develop-web-terminal.md)    
     * [实现自己的scheduler](develop/自定义k8s存储插件.md) 
     * [实现kubectl插件](develop/自定义kubectl插件.md)
+    * [如何使用crd](develop/how-to-use-crd.md)
 * [结束](end/README.md)
