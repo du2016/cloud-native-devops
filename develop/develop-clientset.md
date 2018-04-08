@@ -1,5 +1,7 @@
-1.使用client-go out-of-cluster\
+1.使用client-go out-of-cluster
+
 2.如果在集群内部可以使用incluster配置，只需要导入"k8s.io/client-go/1.5/rest" 使用config, err := rest.InClusterConfig()
+
 2.需要将kubeconfig文件放到指定位置
 
 ```

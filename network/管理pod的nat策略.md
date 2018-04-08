@@ -1,7 +1,7 @@
 
 # 关闭docker及flannel的snat策略
 
-## 关闭dockersnat
+## 关闭docker snat
 
 docker默认开启masq,可以通过 `--ip-masq=false`参数关闭masq
 
