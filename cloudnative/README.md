@@ -10,7 +10,7 @@
 
 [微服务本质](https://dzone.com/articles/the-truth-about-microservices)
 
-[dzone 元计算板块](https://dzone.com/cloud-computing-tutorials-tools-news)
+[dzone 云计算板块](https://dzone.com/cloud-computing-tutorials-tools-news)
 
 [k8s on gcp](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
