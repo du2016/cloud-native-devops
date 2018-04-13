@@ -80,7 +80,6 @@
     * [实现自己的scheduler](develop/自定义k8s存储插件.md) 
     * [实现kubectl插件](develop/自定义kubectl插件.md)
     * [如何自定义资源](develop/deploy-custom-resources.md)
-    * [如何添加设备](develop/device-plugin.md)
     * [添加第三方硬件资源](develop/how-to-add-device.md)
     * [如何使用crd](develop/how-to-use-crd.md)
 
