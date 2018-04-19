@@ -11,7 +11,9 @@
 ```
 --admission-control=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota,Initializers,NamespaceExists
 ```
+
 - 启用dynamic admission controller API
+
 ```
 --runtime-config=rbac.authorization.k8s.io/v1beta1=true,admissionregistration.k8s.io/v1alpha1=true
 ```
@@ -20,7 +22,7 @@
 
 ```
 curl -L https://git.io/getLatestIstio | sh -
-cd istio-0.7
+cd istio-0.7.1
 export PATH=$PWD/bin:$PATH
 ```
 
@@ -99,14 +101,19 @@ istio-sidecar-injector-844b9d4f86-5bns5   1/1       Running   0          46m
 ```
 # 添加测试服务
 kubectl apply -f samples/sleep/sleep.yaml
+
 # 查看 deploy的状态
 kubectl get deployment -o wide
+
 # 查看pod状态
 kubectl get pod
+
 # 给ns添加label 这里是因为使用的MutatingWebhookConfiguration功能通过 kubectl get MutatingWebhookConfiguration istio-sidecar-injector 查看对应配置
 kubectl label namespace default istio-injection=enabled
+
 # 删除pod
 kubectl delete pods -l app=sleep
+
 # 重新查看状态，可以看到deploy中虽然只启动了一个pod，但是MutatingWebhookConfiguration注入了一个sidecarpod
 kubectl get pods -l app=sleep
 NAME                     READY     STATUS        RESTARTS   AGE
