@@ -208,3 +208,6 @@ ab -c 1000 -n 100000000000 http://podinfosvc:port/index.html
 ```
 
 可以看到已经扩容
+
+
+# 有关apiserver的认证机制参考 https://github.com/kubernetes-incubator/apiserver-builder/blob/master/docs/concepts/auth.md
