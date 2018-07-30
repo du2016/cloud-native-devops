@@ -18,3 +18,9 @@ large-cluster-size-threshold集群大小
 
 kubectl cordon $NODENAME标记为不可调用
 kubectl taint  $NODENAME驱逐
+
+
+# role
+
+kubernetes.io/role=ssd
+node-role.kubernetes.io/master=""

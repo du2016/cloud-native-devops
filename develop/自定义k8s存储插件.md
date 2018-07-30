@@ -4,7 +4,7 @@
 
 ## 介绍
 
-lexvolume使用户能够编写自己的驱动程序并在Kubernetes中添加对卷的支持。如果--enable-controller-attach-detach启用Kubelet选项，则供应商驱动程序应安装在每个Kubelet节点和主节点上的卷插件路径中。
+flexvolume使用户能够编写自己的驱动程序并在Kubernetes中添加对卷的支持。如果--enable-controller-attach-detach启用Kubelet选项，则供应商驱动程序应安装在每个Kubelet节点和主节点上的卷插件路径中。
 
 Flexvolume是Kubernetes 1.8版本以后的GA特性。
 

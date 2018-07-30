@@ -9,7 +9,7 @@ yum install epel* flannel conntrack-tools docker  -y
 
 - 配置
 
-overlay需要3.18以上内核，overlay2需要4.0以上内核，关于[overlay存储说明](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/)
+除centos外，overlay需要3.18以上内核，overlay2需要4.0以上内核，关于[overlay存储说明](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/)，为了更好的兼容新属性，最好升级内核。
 ```
 cat > /etc/sysconfig/docker <<EOF
 # /etc/sysconfig/docker

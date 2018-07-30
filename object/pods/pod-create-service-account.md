@@ -1,1 +1,1 @@
-https://k8smeetup.github.io/docs/tasks/configure-pod-container/configure-service-account/
+# 为pod配置service account
