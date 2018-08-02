@@ -64,4 +64,7 @@ NAME            TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)                
 istio-ingress   NodePort   10.254.83.223   <none>        80:32013/TCP,443:30784/TCP   3d
 
 通过nodeport访问
+
+```
 http://172.26.6.3:32013/productpage
+```

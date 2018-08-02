@@ -38,5 +38,4 @@ CRD是一个内建的API, 它提供了一个简单的方式来创建自定义资
 
 # custom-metrics-apiserver
 
-custom-metrics-apiserver 可以实现自定义指标HPA
-https://github.com/kubernetes-incubator/custom-metrics-apiserver 提供了实现框架
+[custom-metrics-apiserver](https://github.com/kubernetes-incubator/custom-metrics-apiserver 提供了实现框架) 可以实现自定义指标HPA

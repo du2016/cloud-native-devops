@@ -1,10 +1,8 @@
-# 使用prom替换heapster实现基于mem/cpu的hpa
-
-# 依赖
+## 依赖
 
 - k8s 1.8+
 
-# 安装prometheus监控
+## 安装prometheus监控
 
 使用  prometheus-operator安装prometheus
 ```
@@ -15,9 +13,10 @@ kubectl apply -f ./contrib/kube-prometheus/manifests/
 
 访问prom ui查看指标
 
-# 证书生成
+## 证书生成
 
-## 生成验证请求客户端身份的根证书
+### 生成验证请求客户端身份的根证书(亦可复用kubernetes的证书和ca，未测试)
+
 ```
 cat <<EOF > front-proxy-ca-csr.json
 {
@@ -31,7 +30,7 @@ EOF
 cfssl gencert -initca front-proxy-ca-csr.json | cfssljson -bare front-proxy-ca
 ```
 
-## 生成证明apiserver身份的客户端证书（或者其它聚合器）
+### 生成证明apiserver身份的客户端证书（或者其它聚合器）
 
 ```
 cat <<EOF > front-proxy-client-csr.json
@@ -52,7 +51,20 @@ cfssl gencert \
   front-proxy-client-csr.json | cfssljson -bare front-proxy-client
 ```
 
-将根证书拷贝到其它节点
+
+## 配置
+
+### kube-apiserver添加配置
+
+```
+--requestheader-client-ca-file=/etc/kubernetes/ssl/front-proxy-ca.pem --requestheader-allowed-names=front-proxy-client --requestheader-extra-headers-prefix=X-Remote-Extra- --requestheader-group-headers=X-Remote-Group --requestheader-username-headers=X-Remote-User --proxy-client-cert-file=/etc/kubernetes/ssl/front-proxy-client.pem --proxy-client-key-file=/etc/kubernetes/ssl/front-proxy-client-key.pem
+
+kubectl delete configmap extension-apiserver-authentication  -n kube-system
+
+service kube-apiserver restart
+```
+
+不重启apiserve需要以下操作
 
 ```
 scp /etc/kubernetes/ssl/front-proxy-ca.pem xxx:/etc/kubernetes/ssl/front-proxy-ca.pem
@@ -69,24 +81,17 @@ scp /etc/kubernetes/ssl/front-proxy-ca.pem xxx:/etc/kubernetes/ssl/front-proxy-c
           path: /etc/kubernetes/ssl
 ```
 
-# 配置
-
-## kube-apiserver添加配置
-
-```
---requestheader-client-ca-file=/etc/kubernetes/ssl/front-proxy-ca.pem --requestheader-allowed-names=aggregator --requestheader-extra-headers-prefix=X-Remote-Extra- --requestheader-group-headers=X-Remote-Group --requestheader-username-headers=X-Remote-User --proxy-client-cert-file=/etc/kubernetes/ssl/front-proxy-client.pem --proxy-client-key-file=/etc/kubernetes/ssl/front-proxy-client-key.pem
-```
-
-## controller-manager添加配置
+### controller-manager添加配置
 
 ```
 --horizontal-pod-autoscaler-use-rest-clients=true
 ```
 
 
-# metrics-server
 
-## 安装
+## metrics-server
+
+### 安装
 
 ```
 git clone https://github.com/kubernetes-incubator/metrics-server
@@ -94,7 +99,7 @@ cd metrics-server/deploy
 kubectl apply -f 1.8+/
 ```
 
-## 验证配置
+### 验证配置
 ```
 #查看node指标
 kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes" | jq .
@@ -102,9 +107,9 @@ kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes" | jq .
 kubectl get --raw "/apis/metrics.k8s.io/v1beta1/pods" | jq .
 ```
 
-# 验证hpa
+## 验证hpa
 
-## 创建podinfo deployment
+### 创建podinfo deployment
 
 ```
 apiVersion: extensions/v1beta1
@@ -169,7 +174,7 @@ spec:
                   fieldPath: metadata.annotations
 ```
 
-## 创建podinfo hpa
+### 创建podinfo hpa
 
 ```
 apiVersion: autoscaling/v2beta1
@@ -194,7 +199,7 @@ spec:
       targetAverageValue: 200Mi
 ```
 
-## 验证
+### 验证
 
 查看是否获取到指标数据
 ```
@@ -207,7 +212,9 @@ kubectl get hpa
 ab -c 1000 -n 100000000000 http://podinfosvc:port/index.html
 ```
 
-可以看到已经扩容
+再次执`kubectl get hpa`行可以看到已经扩容
 
+## 参考
 
-# 有关apiserver的认证机制参考 https://github.com/kubernetes-incubator/apiserver-builder/blob/master/docs/concepts/auth.md
+- 有关addon apiserver的认证机制[参考文档](https://github.com/kubernetes-incubator/apiserver-builder/blob/master/docs/concepts/auth.md)
+- 有关从configmap获取配置的[代码](github.com/kubernetes-incubator/metrics-server/metrics/heapster.go)
