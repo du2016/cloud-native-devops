@@ -32,6 +32,17 @@ sed -i "s#\$SERVICE_CLUSTER_IP_RANGE#$SERVICECLUSTERIPRANGE#g" *.yaml.sed
 ```
 kubectl create -f kube-dns.yaml.sed
 ```
+#### 配置kube-dns上游dns和子域
+
+```
+kubectl edit configmap -n kube-system kube-dns
+data:
+  upstreamNameservers: |
+    ["10.10.3.201", "10.10.3.202"]
+  stubDomains: |
+    {"test.com": ["1.1.1.1"]}  
+```
+
 
 #### 安装coredns
 
