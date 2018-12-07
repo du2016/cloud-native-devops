@@ -121,7 +121,7 @@ KUBE_LOG_LEVEL="--v=0"
 KUBE_ALLOW_PRIV="--allow-privileged=true"
 
 # How the controller-manager, scheduler, and proxy find the apiserver
-KUBE_MASTER="--master=https://172.26.6.131:6443"
+KUBE_MASTER="--master=https://172.26.6.1:6443"
 EOF
 ```
 

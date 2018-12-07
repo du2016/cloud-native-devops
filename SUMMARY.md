@@ -26,7 +26,7 @@
     * [插件安装]()
         * [安装kube-router](install/addons/install-kube-router.md)
         * [安装kube-proxy](install/addons/install-kube-proxy.md)
-        * [安装dns](install/addons/install-dns.md)
+        * [安装dns](install/addons/install-kube-dns.md)
         * [安装dashboard](install/addons/install-dashboard.md)
         * [安装fluentd](install/addons/install-fluentd-es.md)
         * [安装heapster](install/addons/install-heapster-influxdb-grafana.md)

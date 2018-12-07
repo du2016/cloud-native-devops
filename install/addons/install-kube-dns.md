@@ -42,30 +42,3 @@ data:
   stubDomains: |
     {"test.com": ["1.1.1.1"]}  
 ```
-
-
-#### 安装coredns
-
-```
-kubectl create -f coredns.yaml.sed
-```
-
-
-#### 测试
-
-```
-kubectl run nginx --image=nginx && kubectl expose deploy nginx --target-port=80 --port=80
-kubectl exec -it busybox-5788c675f7-8472h ping nginx
-yum install *bin/dig
-dig @10.254.0.2 nginx.default.svc.cluster.local
-```
-
-#### 使用coredns仓库安装
-
-[coredns](https://github.com/coredns/deployment/tree/master/kubernetes)
-
-```
-后面可以有三个参数 svc-cidr pod-cidr domain
-$ ./deploy.sh 10.3.0.0/12 172.17.0.0/16 | kubectl apply -f -
-$ kubectl delete --namespace=kube-system deployment kube-dns
-```

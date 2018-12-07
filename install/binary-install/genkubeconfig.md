@@ -1,5 +1,6 @@
 # 创建BOOTSTRAP_TOKEN
 
+mkdir kubeconfig && cd kubeconfig 
 ```
 export BOOTSTRAP_TOKEN=$(head -c 16 /dev/urandom | od -An -t x | tr -d ' ')
 cat > /etc/kubernetes/token.csv <<EOF
@@ -8,7 +9,7 @@ EOF
 
 # kubelet bootstrap kubeconfig
 
-export KUBE_APISERVER="https://172.26.6.131:6443"
+export KUBE_APISERVER="https://172.26.6.1:6443"
 
 kubectl config set-cluster kubernetes \
   --certificate-authority=/etc/kubernetes/ssl/ca.pem \
@@ -40,12 +41,12 @@ kubectl config set-credentials kube-proxy \
   --client-certificate=/etc/kubernetes/ssl/kube-proxy.pem \
   --client-key=/etc/kubernetes/ssl/kube-proxy-key.pem \
   --embed-certs=true \
-  --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig
+  --kubeconfig=kube-proxy.kubeconfig
 kubectl config set-context default \
   --cluster=kubernetes \
   --user=kube-proxy \
-  --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig
-kubectl config use-context default --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig
+  --kubeconfig=kube-proxy.kubeconfig
+kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig
 ```
 
 # 生成kubectl kubeconfig
