@@ -104,4 +104,3 @@
     * [Knative](serverless/knative/README.md)
         * [安装Knative](serverless/knative/install.md)
         * [起步](serverless/knative/getstart.md)
-* [边缘计算](edge-computing/Readme.md)
