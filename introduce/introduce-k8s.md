@@ -24,16 +24,6 @@ Kubernetes开放源代码，可让您自由地利用本地，混合或公共云�
 
 国内外许多公司现在都在使用k8s，[用户列表](https://kubernetes.io/case-studies/)
 
-# 支持
-
-在 v1.9 版本中，Kubernetes支持集群节点(node)数可达5000个。更具体地说，我们配置能够支持所有如下条件：
-
-- 不超过5000个节点
-- 不超过总共150000个pod
-- 不超过总共300000个container
-- 单节点不超过100个pod
-[具体容量支持情况](https://kubernetes.io/docs/admin/cluster-large/)
-
 # 设计思想
 
 - 便携

@@ -115,3 +115,18 @@ Kubernetes在容器创建之后就会马上发送postStart事件，但是并没�
 它会在容器入口被调用之前调用postStart操作，因为postStart的操作跟容器的操作是异步的，
 而且Kubernetes控制台会锁住容器直至postStart完成，
 因此容器只有在 postStart操作完成之后才会被设置成为RUNNING状态。
+
+
+# pod readinessgate
+
+1.11 引入 ，1.14稳定
+
+定义时添加spec.readinessGates
+```
+Kind: Pod
+...
+spec:
+  readinessGates:
+    - conditionType: "www.example.com/feature-1"
+```
+然后通过api更新即可控制pod的状态

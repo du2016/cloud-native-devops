@@ -1,11 +1,6 @@
 # k8s生态学习手册
 
-* [介绍](README.md)
-* [CLOUDNATIVE资料](cloudnative/README.md)
 * [简介](introduce/introduce-k8s.md)
-* [快速入门](getstart/README.md)
-    * [快速启动你的第一个k8s集群](getstart/createcluster.md)
-    * [创建第一个服务k8s服务](getstart/createsvc.md)
 * [架构](architecture/README.md)
 * [对象介绍](object/README.md)
     * [certificatesigningrequests](object/certificatesigningrequests/README.md)

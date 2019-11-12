@@ -253,13 +253,18 @@ kubectl apply -f heartbeat.yaml
 ## 效果展示
 
 ## pod列表
-![aa](../../architecture/image/1.png)
+![aa](http://q08i5y6c2.bkt.clouddn.com/1.png)
 
 ## pod日志
-![aa](../../architecture/image/2.png)
+![aa](http://q08i5y6c2.bkt.clouddn.com/2.png)
 
 ## pod监控
-![aa](../../architecture/image/3.png)
+![aa](http://q08i5y6c2.bkt.clouddn.com/3.png)
 
 ## pod网络
-![aa](../../architecture/image/4.png)
+![aa](http://q08i5y6c2.bkt.clouddn.com/4.png)
+
+
+扫描关注我:
+
+![微信](http://q08i5y6c2.bkt.clouddn.com/qrcode_for_gh_7457c3b1bfab_258.jpg)
