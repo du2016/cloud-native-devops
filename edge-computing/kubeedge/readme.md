@@ -136,3 +136,8 @@ CloudHub是cloudcore的一个模块，是Controller和Edge端之间的中介。�
 ## Device Controller
  
 通过k8s CRD来描述设备metadata/status ，devicecontroller在云和边缘之间同步，有两个goroutines: `upstream controller`/`downstream controller`
+
+
+扫描关注我:
+
+![微信](http://q08i5y6c2.bkt.clouddn.com/qrcode_for_gh_7457c3b1bfab_258.jpg)

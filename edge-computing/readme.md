@@ -47,3 +47,7 @@
 异构：边缘异构硬件和通信协议。
 
 
+扫描关注我:
+
+![微信](http://q08i5y6c2.bkt.clouddn.com/qrcode_for_gh_7457c3b1bfab_258.jpg)
+

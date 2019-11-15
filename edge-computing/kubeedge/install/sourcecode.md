@@ -202,3 +202,7 @@ kubectl apply -f $GOPATH/src/github.com/kubeedge/kubeedge/build/deployment.yaml
 ```
 kubectl get pods
 ```
+
+扫描关注我:
+
+![微信](http://q08i5y6c2.bkt.clouddn.com/qrcode_for_gh_7457c3b1bfab_258.jpg)
