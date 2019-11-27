@@ -47,6 +47,7 @@ edgecore：
 - EventBus：使用MQTT处理内部边缘通信。
 - DeviceTwin：它是用于处理设备元数据的设备的软件镜像。
 - MetaManager：它管理边缘节点上的元数据。
+- ServiceBus: 接收云上服务请求和边缘应用进行http交互
 
 ## edged
 

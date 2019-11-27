@@ -89,6 +89,7 @@ func Register(m Module) {
 
 # StartModules
 
+
 初始化一个上下文，当前只有一种类型，也就是go channel,可能以后会有更多的上下文实现
 
 初始化全局上下文context，context包含两个对象moduleContext，messageContext，
@@ -120,7 +121,10 @@ type MessageContext interface {
 }
 ```
 
-遍历要加载的models，通过AddModule将模块添加到模块上下文的channel上下文里面，AddModuleGroup 根据组模块添加channel到typeChannels
+> 这部分消息同步代码即为kubeedge中的消息同步框架[beehive](https://github.com/kubeedge/beehive)的实现
+
+遍历要加载的models，通过AddModule将模块添加到模块上下文的channel上下文里面，
+AddModuleGroup 根据组模块添加channel到typeChannels
 
 有三个channel  channels,typeChannels,anonChannels：
 
@@ -133,6 +137,20 @@ type ChannelContext struct {
 	anonChannels map[string]chan model.Message
 	anonChsLock  sync.RWMutex
 }
+```
+
+分别有以下group
+
+```
+const (
+	BusGroup = "bus"   -- servicebus,eventbus
+	HubGroup = "hub"  -- edgehub
+	TwinGroup = "twin" -- devicetwin
+	MetaGroup = "meta"   -- testmanager
+	EdgedGroup = "edged"   -- edged 
+	UserGroup = "user"  
+	MeshGroup = "mesh"  -- edgemesh
+)
 ```
 
 然后每个模块通过根据Context启动自身
