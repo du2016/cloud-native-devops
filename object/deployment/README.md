@@ -1,1 +1,0 @@
-https://k8smeetup.github.io/docs/concepts/workloads/controllers/deployment/

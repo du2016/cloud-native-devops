@@ -1,1 +1,0 @@
-https://k8smeetup.github.io/docs/tasks/configure-pod-container/pull-image-private-registry/
