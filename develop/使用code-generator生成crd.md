@@ -33,7 +33,8 @@
 
 ## conversion-gen
 
-conversion-gen是用于自动生成在内部和外部类型之间转换的函数的工具。一般的转换代码生成任务涉及三套程序包：
+
+conversion-gen是用于自动生成在内部和外部类型之间转换的函数的工具，例如alpha->beat。一般的转换代码生成任务涉及三套程序包：
 
 - 一套包含内部类型的程序包，
 - 一套包含外部类型的程序包，
@@ -225,6 +226,9 @@ go informer.Start(nil)
 IpCrdInformer:=informer.Rocdu().V1().Ips()
 cache.WaitForCacheSync(nil,IpCrdInformer.Informer().HasSynced)
 ```
+
+
+完整的controller不再讲述
 
 
 https://github.com/kubernetes/code-generator
