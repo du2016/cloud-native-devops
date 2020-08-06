@@ -1,59 +1,195 @@
-# 在kubernetes集群上安装knative
 
-本指南引导您使用预编译镜像安装最新版本的Knative
 
-## 开始之前
+本指南将引导您完成最新版本Knative的安装。
 
-Knative 需要 v1.10以上版本kubernetes 集群，kubectl v1.10也被需要，本指南假定您已经创建了一个kubernetes集群，您可以方便的安装Alpha软件
+Knative有两个组件，可以独立安装或一起使用。为了帮助您挑选适合自己的作品，以下是每个组件的简要说明：
 
-本指南假定您在Mac或Linux环境中使用BASH；在Windows环境中需要调整一些命令。
+- Serving 为基于无状态请求的服务提供了一种零扩展抽象。
+- Eventing提供了抽象来启用绑定事件源（例如Github Webhooks，Kafka）和使用者（例如Kubernetes或Knative Services）的绑定。
 
-## 安装istio
 
-Knative 依赖于istio,istio工作负载需要为init container开启特权模式
+Knative还具有一个Observability插件，该插件提供了标准工具，可用于查看Knative上运行的软件的运行状况
 
-- 安装istio
+# 在你开始之前
+本指南假定您要在Kubernetes群集上安装上游Knative版本。 越来越多的供应商已经管理Knative产品。 有关完整列表，请参见Knative产品页面。
 
-```
-kubectl apply -f https://raw.githubusercontent.com/knative/serving/v0.1.0/third_party/istio-0.8.0/istio.yaml
-```
+Knative v0.15.0需要Kubernetes集群v1.15或更高版本，以及兼容的kubectl。 本指南假定您已经创建了Kubernetes集群，并且在Mac或Linux环境中使用bash。 在Windows环境中需要调整一些命令
 
-- 为default namespace 添加`istio-injection=enabled` 标签
+# 安装Serving组件
 
-```
-kubectl label namespace default istio-injection=enabled
-```
-
-- 监控istio组件，直到所有组件显示`Running`或`Completed` `Status`:`bash kubectl get pods -n istio-system`。
+1.使用以下命令安装crd
 
 ```
-所有组件运行和运行需要几分钟；您可以重新运行命令以查看当前状态。
+kubectl apply --filename https://github.com/knative/serving/releases/download/v0.15.0/serving-crds.yaml
 ```
 
-## 安装Knative服务
-
-+ 接下来，我们将安装Knative服务及其依赖关系。
+2.serving的安装核心组件
 
 ```
-kubectl apply -f https://github.com/knative/serving/releases/download/v0.1.0/release.yaml
+kubectl apply --filename https://github.com/knative/serving/releases/download/v0.15.0/serving-core.yaml
 ```
 
-+ 监控各部件，直到所有部件显示运行状态.
+3.安装网络层
+    
+
+    - 安装contour
+    
+    kubectl apply --filename https://github.com/knative/net-contour/releases/download/v0.15.0/contour.yaml
+    
+    - 安装knative contour controller
+    
+    kubectl apply --filename https://github.com/knative/net-contour/releases/download/v0.15.0/net-contour.yaml
+    
+    - 配置knativeserving使用Contour
+    
+    kubectl patch configmap/config-network \
+      --namespace knative-serving \
+      --type merge \
+      --patch '{"data":{"ingress.class":"contour.ingress.networking.knative.dev"}}'
+      
+    - 获取ip
+    
+    kubectl --namespace contour-external get service envoy
+    
+4. 配置DNS
+  
+  因为我们使用kind安装此步骤跳过
+  
+# 安装Eventing组件
+
+1.安装crd
 
 ```
-kubectl get pods -n knative-serving
+kubectl apply  --selector knative.dev/crd-install=true \
+--filename https://github.com/knative/eventing/releases/download/v0.15.0/eventing.yaml
 ```
 
-就像ISTIO组件一样，这些组件可以运行和运行几秒钟；您可以重新运行命令以查看当前状态。
+2.安装Eventing组件
 
-> 注意：不用重新运行命令，可以添加`--watch`到上面的命令，以实时查看组件的状态更新。使用Ctrl +C退出监视模式。
+```
+kubectl apply --filename https://github.com/knative/eventing/releases/download/v0.15.0/eventing.yaml
+```
 
-现在，您已经准备好将应用程序部署到新的Knative集群中。
+3.安装默认channel
 
-## 构建应用程序
+这里选用kafka
 
-现在，你包含Knative的集群已经安装好了，你已经准备好部署一个应用程序了。
+- 创建kafka命名空间
 
-部署第一个应用程序有两个选项：
-- 你可以循序渐进地[开始使用Knative应用程序部署指南](https://github.com/knative/docs/blob/master/install/getting-started-knative-app.md)。
-- 您可以查看可用的[示例应用程序](https://github.com/knative/docs/blob/master/serving/samples/README.md)并部署您的选择之一。
+```  
+  kubectl create namespace kafka
+```
+
+  - 安装Strimzi operator
+
+```  
+  curl -L "https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.16.2/strimzi-cluster-operator-0.16.2.yaml" \
+    | sed 's/namespace: .*/namespace: kafka/' \
+    | kubectl -n kafka apply -f -
+```
+
+  - 查看kafka的yaml
+
+```
+  apiVersion: kafka.strimzi.io/v1beta1
+  kind: Kafka
+  metadata:
+    name: my-cluster
+  spec:
+    kafka:
+      version: 2.4.0
+      replicas: 1
+      listeners:
+        plain: {}
+        tls: {}
+      config:
+        offsets.topic.replication.factor: 1
+        transaction.state.log.replication.factor: 1
+        transaction.state.log.min.isr: 1
+        log.message.format.version: "2.4"
+      storage:
+        type: ephemeral
+    zookeeper:
+      replicas: 3
+      storage:
+        type: ephemeral
+    entityOperator:
+      topicOperator: {}
+      userOperator: {}
+```
+  - 部署
+```
+    kubectl apply -n kafka -f kafka.yaml
+```
+  - 检查kafka集群状态
+```
+    $ kubectl get pods -n kafka
+    NAME                                          READY   STATUS    RESTARTS   AGE
+    my-cluster-entity-operator-65995cf856-ld2zp   3/3     Running   0          102s
+    my-cluster-kafka-0                            2/2     Running   0          2m8s
+    my-cluster-zookeeper-0                        2/2     Running   0          2m39s
+    my-cluster-zookeeper-1                        2/2     Running   0          2m49s
+    my-cluster-zookeeper-2                        2/2     Running   0          2m59s
+    strimzi-cluster-operator-77555d4b69-sbrt4     1/1     Running   0          3m14s
+```
+  - 安装kafkachannel
+```
+  curl -L "https://github.com/knative/eventing-contrib/releases/download/v0.15.0/kafka-channel.yaml" \
+   | sed 's/REPLACE_WITH_CLUSTER_URL/my-cluster-kafka-bootstrap.kafka:9092/' \
+   | kubectl apply --filename -
+```
+  - 安装broker
+```
+  kubectl apply --filename https://github.com/knative/eventing/releases/download/v0.15.0/channel-broker.yaml
+```
+  - 配置使用的broker
+```
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: config-br-defaults
+    namespace: knative-eventing
+  data:
+    default-br-config: |
+      # This is the cluster-wide default broker channel.
+      clusterDefault:
+        brokerClass: ChannelBasedBroker
+        apiVersion: v1
+        kind: ConfigMap
+        name: kafka-channel
+        namespace: knative-eventing
+```
+
+  - broker具体配置
+
+```
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: imc-channel
+    namespace: knative-eventing
+  data:
+    channelTemplateSpec: |
+      apiVersion: messaging.knative.dev/v1beta1
+      kind: InMemoryChannel
+  ---
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: kafka-channel
+    namespace: knative-eventing
+  data:
+    channelTemplateSpec: |
+      apiVersion: messaging.knative.dev/v1alpha1
+      kind: KafkaChannel
+      spec:
+        numPartitions: 3
+        replicationFactor: 1
+```
+
+
+查看 eventing组件状态
+
+```
+kubectl get pods --namespace knative-eventing
+```
