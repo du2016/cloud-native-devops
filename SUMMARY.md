@@ -106,7 +106,7 @@
     * [如何使用crd](develop/how-to-use-crd.md)
     * [安装metricserver](develop/install-metric-server.md)
 * [servicemesh](servicemesh/README.md)
-    * [istio](servicemesh/istio/README.md)
+    * [istio](servicemesh/istio/Introduction.md)
         * [安装](servicemesh/istio/install.md)
         * [安装bookinfo示例程序](servicemesh/istio/example-bookinfo.md)
         * [pilot介绍](servicemesh/istio/pilot.md)

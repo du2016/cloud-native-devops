@@ -70,7 +70,36 @@ generateSecret 生成secret
 
 sendRetriableRequest
 
+```
+---
+name: envoy.filters.http.rbac
+typed_config:
+  "@type": type.googleapis.com/envoy.config.filter.http.rbac.v2.RBAC
+  rules:
+    policies:
+      test:
+        permissions:
+        - and_rules:
+            rules:
+            - or_rules:
+                rules:
+                - header:
+                    name: ":method"
+                    exact_match: GET
+        principals:
+        - and_ids:
+            ids:
+            - or_ids:
+                ids:
+                - metadata:
+                    filter: test
+                    path:
+                    - key: source.principal
+                    value:
+                      string_match:
+                        exact: test
 
+```
 
 
 https://github.com/envoyproxy/data-plane-api/blob/master/xds_protocol.rst#id35

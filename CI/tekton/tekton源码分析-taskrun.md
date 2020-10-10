@@ -7,7 +7,8 @@ Deps决定依赖关系
 - 初始化卷
 - 初始化script，生成脚本，用于将script写入到initcontainer,生成tmpfile，执行tmpfile
 - 初始化wokingdir
-- 解析未指定命令容器的entrypoints
+- 解析未指定命令容器的entrypoints resolveEntrypoints
+
 - 将命令与entrypoint传递给orderContainers，
 
 wait_file

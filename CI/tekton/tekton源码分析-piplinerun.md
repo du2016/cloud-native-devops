@@ -14,6 +14,8 @@ MainWithConfig是程序的入口，负责整体的初始化工作，
 - CheckK8sClientMinimumVersionOrDie 对k8s版本进行检查
 - SetupConfigMapWatchOrDie 检测所需的config map,此处根据SYSTEM_NAMESPACE进行判断，同时也可以指定ResourceLabelEnvKey，指定label selector，用于watch 配置，初始化controllers
 
+downward-api
+
 ```
       - name: SYSTEM_NAMESPACE
         valueFrom:
